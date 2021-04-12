@@ -1,0 +1,80 @@
+html {
+    height: 100%;
+} 
+
+body {
+    height: calc(100vh - 164px);
+    font-family: 'Poppins';
+}
+
+
+
+/* Carousel styling */
+#introCarousel,
+.carousel-inner,
+.carousel-item,
+.carousel-item.active {
+  height: 100vh;
+}
+
+.carousel-item:nth-child(1) {
+  background-image: url('/media/pexels-quang-nguyen-vinh-6875144.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.carousel-item:nth-child(2) {
+  background-image: url('/media/pexels-pixabay-290595.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.carousel-item:nth-child(3) {
+  background-image: url('/media/pexels-picjumbocom-196667.jpg') no-repeat center center fixed;
+}
+
+/* Height for devices larger than 576px */
+@media (min-width: 992px) {
+  #introCarousel {
+    margin-top: -58.59px;
+  } 
+}
+
+.navbar .nav-link {
+  color: #fff !important;
+}
+
+/* buttons */
+
+.icons {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: .5rem;
+    width: .5rem;
+} 
+
+/* button */
+.click-btn {
+    background: #eb810f;
+    color: #000;
+    min-width: 2.6rem;
+}
+.click-btn:hover,
+.click-btn:active,
+.click-btn:focus,
+.click-btn:active:focus {
+  background-color: #df4929;
+  border-color: #df4929;
+  color: white;
+}
+
+/* media Quiries */
+    /* extra large screens */
+    @media (min-width: 1200px) {
+        .container {
+            max-width: 80%;
+        }
+    } 
