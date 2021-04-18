@@ -95,7 +95,7 @@ div.row.justify-content-center {
 } 
 
 a,i, h3, h5, .nav-link:hover{
-  color: #061d04!important;
+  color: #060e01 !important;
 }
 
 h1 {
@@ -130,17 +130,7 @@ a.navlink {
   transition: 0.3s ease-in-out;
   background-color: transparent;
 } 
-
-/* icons */
-
-
-/* .icons {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: .5rem;
-    width: .5rem;
-}  */ 
+ 
 
 /* button */
 .btn {
@@ -157,6 +147,21 @@ a.navlink {
   text-decoration: none;
 } 
 
+/* button */
+/* .btn {
+  background: #eb810f;
+  color: #000;
+  min-width: 2.6rem;
+} */
+.btn:hover,
+.btn:active,
+.btn:focus,
+.btn:active:focus {
+background-color: #df4929;
+border-color: #df4929;
+color: white;
+}
+
 /* test */
 
 html {
@@ -168,51 +173,11 @@ a {
 }
 
 /* Navigation */
-/* .text-dark {
-  color: #000 !important;
-}
-.main-info {
-  color: #ee7c02;
-  font-weight: bolder;
-  font-size: 3rem;
-}
-.logo-txt {
-  text-transform: uppercase;
-  font-size: 2rem;
-  letter-spacing: 3px;
-}
-
-.logo-link {
-  width: fit-content;
-}  */
-
-/* .icons {
-  align-items: center;
-  display: inline-flex;
-  justify-content: center;
-  height: .5rem;
-  width: .5rem;
-}  */
-
-/* button */
-/* .buy-btn {
-  background: #eb810f;
-  color: #000;
-  min-width: 2.6rem;
-}
-.buy-btn:hover,
-.buy-btn:active,
-.buy-btn:focus,
-.buy-btn:active:focus {
-background-color: #df4929;
-border-color: #df4929;
-color: white;
-} */
 
 /* media Quiries */
     /* extra large screens */
-    @media (min-width: 1200px) {
-      .container {
+@media (min-width: 1200px) {
+    .container {
           max-width: 80%;
       }
   } 
