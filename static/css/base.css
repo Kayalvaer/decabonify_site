@@ -4,49 +4,13 @@ body {
     font-family: 'Poppins';
 }
 
-a,i, h3, h5, .nav-link:hover{
-  color: #061d04!important;
-}
-
-h1 {
-  color: #95f559;
-}
-
-/* .i.fas.fa-search{
-  size: 5rem;
-} */
-
-.fa-search {
-  color: #faebd7;
-}
-
-a.navlink {
-  color: #36621b !important;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-/* Logo */
-#logo-img {
-  max-width: 5rem;
-  bottom: 100px;
-}
-
-#logo:hover {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-  -webkit-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
-  background-color: transparent;
-} 
-
-
 /* Carousel styling */
+
+.main-carousel {
+  top: 0px;
+  
+}  
+
 @keyframes right_to_left {
   from {
     margin-left: 100%;
@@ -89,7 +53,8 @@ div.row.justify-content-center {
 .carousel-item,
 .carousel-item.active {
   height: 100vh;
-}
+  padding-bottom: 10rem;
+} 
 
 .carousel-item:nth-child(1) {
   background-image: url('/media/pexels-quang-nguyen-vinh-6875144.jpg');
@@ -115,14 +80,55 @@ div.row.justify-content-center {
 
 /* Navigation */
 
+.main-nav {
+  z-index: 999;
+  position: absolute;
+  width: 100%;
+}
+
 .navbar .nav-link {
   letter-spacing: .5px;
-
-
 }
 
 .nav-item{
   color: #5abd1d;
+} 
+
+a,i, h3, h5, .nav-link:hover{
+  color: #061d04!important;
+}
+
+h1 {
+  color: #95f559;
+}
+
+.fa-search {
+  color: #faebd7;
+}
+
+a.navlink {
+  color: #36621b !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Logo */
+#logo-img {
+  max-width: 5rem;
+  bottom: 100px;
+}
+
+#logo:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  background-color: transparent;
 } 
 
 /* icons */
@@ -226,5 +232,11 @@ color: white;
 @media (min-width: 1024px) and (max-width: 1366px) {
   .logo-main {
     padding-left: 500px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 766px) {
+  .main-nav ul {
+    background-color: #dad8d69f;
   }
 }
