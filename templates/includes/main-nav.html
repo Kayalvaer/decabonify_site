@@ -1,15 +1,16 @@
 <!--navbar-->
-<div class="collapse navbar-collapse" id="main-nav">
-    <ul class="navbar-nav mr-auto text-center pt-2 pb-2">
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto text-center pb-4">
         <!---home-->
         <li class="nav-item active">
             <a class="nav-link font-weight-bold" href="#">HOME <span class="sr-only">(current)</span></a>
         </li>
         <!---solutions-->
-        <li class="list-inline-item dropdown">
-                <a class="nav-link font-weight-bold" 
+        <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle font-weight-bold" 
                     href="#" 
-                    id="decab-solutions" 
+                    id="decab-solutions navbarDropdown"
+                    role="button" 
                     data-toggle="dropdown"
                     aria-haspopup="true"
                     aria-expanded="false"
@@ -23,10 +24,11 @@
             </div>
         </li>
         <!---Learn More-->
-        <li class="list-inline-item dropdown">
+        <li class="nav-item dropdown">
             <a class="nav-link font-weight-bold" 
                 href="#" 
                 id="decab-learn" 
+                role="button"
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
@@ -40,30 +42,34 @@
             </div>
         </li>
         <!---Blog-->
-        <li class="list-inline-item dropdown">
+        <li class="nav-item dropdown">
             <a  class="nav-link dropdown-toggle font-weight-bold"
                 href="#"
-                id="decab-blog"
+                id="decabBlog"
                 role="button"
                 data-toggle="dropdown"
                 aria-expanded="false"
                 aria-haspopup="true"
             >
-            BLOG 
+            ABOUT 
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="decab-blog">
-                <a href="" class="dropdown-item">Blog</a>
-                <a href="" class="dropdown-item">News</a>
+            <div class="dropdown-menu border-0" aria-labelledby="decabBlog">
+                <a href="" class="dropdown-item">Our Company</a>
+                <a href="" class="dropdown-item">Our Team</a>
+                <a href="" class="dropdown-item">Media</a>
                 <a href="" class="dropdown-item">Events</a>
             </div>
         </li>
-    </ul>
-    <ul class="menu-icons row list-inline list-unstyled text-center text-lg-right my-0">
+
+        <!---test---->
+    {% comment %} </ul>
+    <ul class="menu-icons row list-inline list-unstyled text-center text-lg-right my-0"> {% endcomment %}
         <!-----icons-->
-        <li class="list-inline-item pb-4 ">
+        <span class="menu-icons">
+        <li class="nav-item pb-4">
           <form method="GET" action="">
               <div class="input-group w-60">
-                  <!-- <input class="rounded-0" type="text" name="q" placeholder="Search our site"> -->
+                 
                   <!-- <div class="input-group-append"> -->
                       <button class="text-center form-control btn rounded-0" type="submit">
                           <span class="icon">
@@ -75,11 +81,11 @@
               </div>
           </form> 
       </li>
-      <li class="list-inline-item dropdown ">
+      <li class="nav-item dropdown ">
         <a
             class="nav-link dropdown-toggle"
             href="#"
-            id="navbarDropdown"
+            id="myaccountDropdown"
             role="button"
             data-toggle="dropdown"
             aria-expanded="false"
@@ -90,7 +96,7 @@
               <p class="my-0">My Account</p> 
             </div>  
           </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <div class="dropdown-menu" aria-labelledby="myaccountDropdown">
           {% if request.user.is_authenticated %}
                 {% if request.user.is_superuser %}
                   <a class="dropdown-item" href="#">Manage Project</a>
@@ -102,7 +108,7 @@
                 <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
             {% endif %}
       </li>
-      <li class="list-inline-item">
+      <li class="nav-item">
         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
             <div class="text-center">
                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
@@ -116,6 +122,7 @@
             </div>
         </a>
       </li>
+      </span>
     </ul>
   </div>
   <!----logo-->

@@ -1,0 +1,156 @@
+[{
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "sku": "DECAB-MAR00001",
+            "name": "Software NET-ZERO Solutions",
+            "description": "Our algorithmic modelling will increase economic business revenue through more accurate and real-time corporate modelling. This technology provides insight and corporate intelligence into energy efficiency, emission intensity, workforce efficiency, maintenance, raw material consumption, conservation of renewable and non-renewable natural resources, and profitability.",
+            "price": 0.00,
+            "category": 1,
+            "rating": 5,
+            "image_url": "",
+            "image": "christina-wocintechchat-com-bVNKEw62dFI-unsplash.jpg"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "sku": "DECAB-MAR00002",
+            "name": "Hardware NET-ZERO Solutions",
+            "description": "Raw material planning is a critical consideration for the industry relating to efficacy and the bottom line. Our hardware net-zero solution modelling allows for forecasting for raw material factors such as seasonality, market volatility, and other external forces.",
+            "price": 0.00,
+            "category": 1,
+            "rating": 4,
+            "image_url": "",
+            "image": "pexels-free-creative-stuff-1476321.jpg"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "sku": "DECAB-MAR00003",
+            "name": "Cloud & Data Driven Solutions",
+            "description": "Organizations face disruptive changes more frequently and often without much time to prepare. Be it the reorganization of existing employees, positions or org units, or a business extension based on a merger or acquisition. Our algorithmic modelling which is cloud and data driven allows the industry to forecast the impact and provide insight into workforce adjustments and the multi-faceted impact it will have on your business.",
+            "price": 0.00,
+            "category": 1,
+            "rating": 5,
+            "image_url": "",
+            "image": "pexels-pixabay-355952.jpg"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "sku": "DECAB-MAR00004",
+            "name": "Offset Solutions",
+            "description": "‘To reach a state of net zero emissions for companies implies two conditions (SBTi): To achieve a scale of value-chain emission reductions consistent with the depth of abatement achieved in pathways that does limits warming to 1.5°C with no or limited overshoot and; To also neutralise the impact of any source of residual emissions that remains unfeasible to be eliminated by permanently removing an equivalent amount of atmospheric carbon dioxide.’.",
+            "price": 0.00,
+            "category": 1,
+            "rating": 4,
+            "image_url": "",
+            "image": "thisisengineering-raeng-WVNLyCPCmIE-unsplash.jpg"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+            "sku": "DECAB-ESO00001",
+            "name": "LCA Analysis",
+            "description": "Global imperatives to reduce emissions adapt to the effects of climate change and transition to a low-carbon economy continue to intensify. 2019 saw numerous climate-related extreme weather events around the world and over six million people to participate in climate demonstrations across 150 countries.Our hardware modelling allows the industry to quickly forecast the impact of the new process, technology, and disruptive technologies relating to emission intensity",
+            "price": 0.00,
+            "category": 2,
+            "rating": 5,
+            "image_url": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F01%2F56%2Fed%2F0156edbc6920a297bda417008fff8b9b.jpg&imgrefurl=https%3A%2F%2Fwww.pinterest.co.uk%2Fpin%2F517702919642684097%2F&tbnid=PRwRUJxXFD6lJM&vet=10CAcQxiAoB2oXChMI-ICd3paO8AIVAAAAAB0AAAAAEAc..i&docid=FW1248ZpuV8duM&w=960&h=933&itg=1&q=lca%20analysis&ved=0CAcQxiAoB2oXChMI-ICd3paO8AIVAAAAAB0AAAAAEAc",
+            "image": "LCA-image.jpeg"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+            "sku": "DECAB-ESO00002",
+            "name": "eProduct Design",
+            "description": "Our product design modelling will increase economic business revenue through more accurate and real-time corporate modelling. This technology provides insight and corporate intelligence into energy efficiency, emission intensity, workforce efficiency, maintenance, raw material consumption, conservation of renewable and non-renewable natural resources, and profitability.",
+            "price": 0.00,
+            "category": 2,
+            "rating": 5,
+            "image_url": "https://images.app.goo.gl/k1zm7ASdbjBsgiZp7",
+            "image": "designer-sketching-drawing-design-development-260nw-1569074104.jpeg"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+            "sku": "DECAB-ESO00003",
+            "name": "eRisk Monitoring",
+            "description": "Our risk monitoring modelling will increase economic business revenue through more accurate and real-time corporate modelling. This technology provides insight and corporate intelligence into energy efficiency, emission intensity, workforce efficiency, maintenance, raw material consumption, conservation of renewable and non-renewable natural resources, and profitability.",
+            "price": 0.00,
+            "category": 2,
+            "rating": 5,
+            "image_url": "https://images.app.goo.gl/jDSsLtXzF8jBfVsN9",
+            "image": "risks-process_550x379.jpeg"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+            "sku": "DECAB-ANA00001",
+            "name": "Market Insights",
+            "description": "Our market insights modelling will increase economic business revenue through more accurate and real-time corporate modelling. This technology provides insight and corporate intelligence into energy efficiency, emission intensity, workforce efficiency, maintenance, raw material consumption, conservation of renewable and non-renewable natural resources, and profitability.",
+            "price": 0.00,
+            "category": 3,
+            "rating": 4,
+            "image_url": "https://images.app.goo.gl/H7BXHPXC2GfyFWMdA",
+            "image": "shutterstock_1023559927-440x264.jpeg"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.product",
+        "fields": {
+            "sku": "DECAB-ANA00002",
+            "name": "eUser Analytics",
+            "description": "Our user analytics model will increase economic business revenue through more accurate and real-time corporate modelling. This technology provides insight and corporate intelligence into energy efficiency, emission intensity, workforce efficiency, maintenance, raw material consumption, conservation of renewable and non-renewable natural resources, and profitability.",
+            "price": 0.00,
+            "category": 3,
+            "rating": 5,
+            "image_url": "https://images.app.goo.gl/agiNkMeoXSw1xMP88",
+            "image": "analytics-header.jpeg"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.product",
+        "fields": {
+            "sku": "DECAB-ANA00003",
+            "name": "ESG Rating",
+            "description": "Our ESG rating model will help increase economic business revenue through more accurate and real-time corporate modelling. This technology provides insight and corporate intelligence into energy efficiency, emission intensity, workforce efficiency, maintenance, raw material consumption, conservation of renewable and non-renewable natural resources, and profitability.",
+            "price": 0.00,
+            "category": 3,
+            "rating": 5,
+            "image_url": "https://images.app.goo.gl/zhmAHzF4AkCbDZfD8",
+            "image": "ESG-rating.jpeg"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.product",
+        "fields": {
+            "sku": "DECAB-ANA00004",
+            "name": "eUser Research",
+            "description": "Our research strategies will increase economic business revenue through more accurate and real-time corporate modelling. This technology provides insight and corporate intelligence into energy efficiency, emission intensity, workforce efficiency, maintenance, raw material consumption, conservation of renewable and non-renewable natural resources, and profitability.",
+            "price": 0.00,
+            "category": 3,
+            "rating": 5,
+            "image_url": "https://images.app.goo.gl/DFTyhdYjFknecBaz9",
+            "image": "ux-researcher-hero-image.jpeg"
+        }
+    }
+
+]

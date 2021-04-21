@@ -1,207 +1,243 @@
 /* General styling */
+
 body {
     height: calc(100vh - 164px);
     font-family: 'Poppins';
 }
 
+
 /* Carousel styling */
 
 .main-carousel {
-  top: 0px;
-  
-}  
-
-@keyframes right_to_left {
-  from {
-    margin-left: 100%;
-  }
-  to {
-    margin-left: 0;
-  }
+    top: 0px;
 }
 
+@keyframes right_to_left {
+    from {
+        margin-left: 100%;
+    }
+    to {
+        margin-left: 0;
+    }
+}
 
-.carousel-caption { 
-  animation: right_to_left 3s ease;
-  position: absolute;
-  top: 60%;
-  text-transform: uppercase;
-  transform: translateY(-55%);
-  width: 100%;
-  letter-spacing: 3px;
-  opacity: 2;
+.carousel-caption {
+    animation: right_to_left 3s ease;
+    position: absolute;
+    top: 60%;
+    text-transform: uppercase;
+    transform: translateY(-55%);
+    width: 100%;
+    letter-spacing: 3px;
+    opacity: 2;
 }
 
 div.row.justify-content-center {
-  background-color: rgba(12, 62, 7, 0.379);
-
+    background-color: rgba(12, 62, 7, 0.379);
 }
 
 .carousel-caption p {
-  font-size: 15px;
-  margin: auto;
-  
+    font-size: 15px;
+    margin: auto;
 }
 
 .carousel-caption h1 {
-  font-size: 2.2rem;
-  text-transform: uppercase;
+    font-size: 2.2rem;
+    text-transform: uppercase;
 }
 
 #heroCarousel,
 .carousel-inner,
 .carousel-item,
 .carousel-item.active {
-  height: 100vh;
-  padding-bottom: 10rem;
-} 
+    height: 100vh;
+    padding-bottom: 10rem;
+}
 
 .carousel-item:nth-child(1) {
-  background-image: url('/media/pexels-quang-nguyen-vinh-6875144.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+    background-image: url('/media/pexels-quang-nguyen-vinh-6875144.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 .carousel-item:nth-child(2) {
-  background-image: url('/media/pexels-pixabay-290595.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+    background-image: url('/media/pexels-pixabay-290595.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 .carousel-item:nth-child(3) {
-  background-image: url('/media/pexels-aleksandar-pasaric-325185.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+    background-image: url('/media/pexels-aleksandar-pasaric-325185.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
 
-} 
 
 /* Navigation */
 
 .main-nav {
-  z-index: 999;
-  position: absolute;
-  width: 100%;
+    z-index: 999;
+    position: absolute;
+    width: 100%;
 }
 
 .navbar .nav-link {
-  letter-spacing: .5px;
+    letter-spacing: .5px;
 }
 
-.nav-item{
-  color: #5abd1d;
-} 
+.nav-item {
+    color: #5abd1d;
+}
 
-a,i, h3, h5, .nav-link:hover{
-  color: #060e01 !important;
+a,
+i,
+h3,
+h5,
+.nav-link:hover {
+    color: #060e01 !important;
 }
 
 h1 {
-  color: #95f559;
+    color: #95f559;
 }
 
 .fa-search {
-  color: #faebd7;
+    color: #faebd7;
 }
 
 a.navlink {
-  color: #36621b !important;
+    color: #36621b !important;
 }
 
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
+
 /* Logo */
+
 #logo-img {
-  max-width: 5rem;
-  bottom: 100px;
+    max-width: 5rem;
+    bottom: 100px;
 }
 
 #logo:hover {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-  -webkit-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
-  background-color: transparent;
-} 
- 
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    background-color: transparent;
+}
+
 
 /* button */
+
 .btn {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .btn:hover {
-  -webkit-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  transform: scale(1.05);
-  -webkit-transition: 0.2s ease-in-out;
-  -o-transition: 0.2s ease-in-out;
-  transition: 0.2s ease-in-out;
-  text-decoration: none;
-} 
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    -webkit-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    text-decoration: none;
+}
+
 
 /* button */
+
+
 /* .btn {
   background: #eb810f;
   color: #000;
   min-width: 2.6rem;
 } */
+
 .btn:hover,
 .btn:active,
 .btn:focus,
 .btn:active:focus {
-background-color: #df4929;
-border-color: #df4929;
-color: white;
+    background-color: #df4929;
+    border-color: #df4929;
+    color: white;
 }
+
 
 /* test */
 
 html {
-  height: 100%;
+    height: 100%;
 }
 
 a {
-  color: #faebd7;
+    color: #faebd7;
 }
+
 
 /* Navigation */
 
+
 /* media Quiries */
-    /* extra large screens */
+
+
+/* extra large screens */
+
 @media (min-width: 1200px) {
     .container {
-          max-width: 80%;
-      }
-  } 
-
-@media (min-width: 768px) {
-    .logo-main {
-     position: absolute;
-     padding-left: 900px;
-   } 
+        max-width: 80%;
+    }
 }
 
-@media (max-width: 766px) {  .menu-icons {
-    flex-direction: column;
-  }
+@media (min-width: 768px) and (max-width: 1024px) {
+    .logo-main {
+        position: absolute;
+        padding-left: 650px;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 812px) {
+    .menu-icons {
+        flex-direction: column;
+    }
+    h1 strong {
+        padding-right: 3rem;
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 320px) {
+    div.row {
+        margin-right: 50px;
+    }
+    h1 strong {
+        font-size: 20px;
+        letter-spacing: normal;
+    }
+    a.btn.btn-outline-success,
+    a.btn.btn-outline-light {
+        padding: 3px 6px;
+        font-size: 10px;
+    }
 }
 
 @media (min-width: 1024px) and (max-width: 1366px) {
-  .logo-main {
-    padding-left: 500px;
-  }
+    .logo-main {
+        padding-left: 500px;
+    }
 }
 
 @media (min-width: 320px) and (max-width: 766px) {
-  .main-nav ul {
-    background-color: #dad8d69f;
-  }
+    .main-nav ul {
+        background-color: #dad8d69f;
+    }
 }
