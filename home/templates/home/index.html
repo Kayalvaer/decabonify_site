@@ -1,10 +1,52 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block content %}
+{% block page_header %}
     <div class="container header-wrapper">
         <div class="row">
             <div class="col"></div>
         </div>
     </div>
 {% endblock %}
+
+{% block content %}
+    <div class="container h-100">
+        <!-- marketplace section content start -->
+      <section>
+        <div class="row market-img img-fluid">
+          <div class="col-md-6 mb-4">
+            {% comment %} <div class="bg-image hover-overlay ripple shadow-2-strong" data-ripple-color="light"> {% endcomment %}
+              {% comment %} <img src="" class="img-fluid" /> {% endcomment %}
+              
+            </div>
+          </div>
+
+          <div class="pl-3">
+                <h4><strong>Facilis consequatur eligendi</strong></h4>
+            <p class="text-muted mb-5 ">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis consequatur
+              eligendi quisquam doloremque vero ex debitis veritatis placeat unde animi laborum
+              sapiente illo possimus, commodi dignissimos obcaecati illum maiores corporis.
+            </p>
+          </div>
+
+          <div class="market-search">
+                <form class="form" method="GET" action="">
+                    <div class="input-group w-70 rounded-4">
+                        <input class="serch-input form-control border border-black rounded-4" type="text" name="q" placeholder="Search our site">
+                            <div class="input-group-append">
+                                <button class="form-control form-control btn btn-black border border-black rounded-4" type="submit">
+                                    <span class="icon">
+                                        <i class="fas fa-search fa-lg"></i>
+                                    </span>
+                                </button>
+                            </div>
+                    </div>           
+                </form>
+         </div>  
+
+        </div>
+      </section>
+
+      <!--third section content end-->
+ {% endblock %}

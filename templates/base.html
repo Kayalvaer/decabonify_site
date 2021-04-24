@@ -7,6 +7,10 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description"
+		        content="Decarbonify is a market place for companies wanting to learn and trade on carbon emmission solutions">
+	      <meta name="keywords" content="sustainability, climatechange, ESG, LCA, maeketplace">
+	      <meta name="author" content="Kay Alvaer">
     {% endblock %}
 
     {% block extra_meta %}
@@ -51,7 +55,7 @@
     <header >
 
     <!-----Navigation----->
-    <nav class="main-nav navbar navbar-expand-lg navbar-light bg-0 ">
+    <nav class="main-nav navbar navbar-expand-lg navbar-light bg-0 fixed-top">
       <!---menu-->
       <button class="navbar-toggler" 
         type="button" data-toggle="collapse" 
@@ -67,14 +71,9 @@
       {% include 'includes/carousel-items.html' %}
 
     <!---end carousel wrapper-->
-
   </header>
 
-     
-
-    {% if messages %}
-        <div class="message-container"></div>
-    {% endif %}
+  
 
     {% block page_header %}
     {% endblock %}
@@ -83,6 +82,11 @@
     {% endblock %}
 
     {% block postloadjs %}
+    {% endblock %}
+
+     <!----footer section ----->
+    {% include "includes/footer.html" %}
+    {% block footer %}
     {% endblock %}
 
     
