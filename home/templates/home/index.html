@@ -13,10 +13,10 @@
     <div class="container h-100">
         <!-- marketplace section content start -->
       <section>
-        <div class="row market-img img-fluid">
-          <div class="col-md-6 mb-4">
-            {% comment %} <div class="bg-image hover-overlay ripple shadow-2-strong" data-ripple-color="light"> {% endcomment %}
-              {% comment %} <img src="" class="img-fluid" /> {% endcomment %}
+          <div class="row market-img img-fluid">
+            <div class="col-md-6 mb-4">
+                {% comment %} <div class="bg-image hover-overlay ripple shadow-2-strong" data-ripple-color="light"> {% endcomment %}
+                {% comment %} <img src="" class="img-fluid" /> {% endcomment %}
               
             </div>
           </div>
@@ -30,23 +30,21 @@
             </p>
           </div>
 
-          <div class="market-search">
+          <div class="market-search rounded-pill">
                 <form class="form" method="GET" action="">
-                    <div class="input-group w-70 rounded-4">
-                        <input class="serch-input form-control border border-black rounded-4" type="text" name="q" placeholder="Search our site">
+                    <div class="input-group w-70">
+                        <input class="serch-input form-control border border-success rounded-pill p-4" type="text" name="q" placeholder="Search our site">
                             <div class="input-group-append">
-                                <button class="form-control form-control btn btn-black border border-black rounded-4" type="submit">
+                                <button class="form-control form-control btn btn-black border border-0" type="submit">
                                     <span class="icon">
-                                        <i class="fas fa-search fa-lg"></i>
+                                        <i class="fas fa-search fa-lg w-50" type="submit"></i>
                                     </span>
                                 </button>
                             </div>
                     </div>           
                 </form>
          </div>  
-
-        </div>
       </section>
-
-      <!--third section content end-->
+    </div>
+    <!--third section content end-->
  {% endblock %}
