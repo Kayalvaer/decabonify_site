@@ -7,7 +7,7 @@
         </li>
         <!---solutions-->
         <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle font-weight-bold" 
+                <a class="nav-link font-weight-bold" 
                     href="#" 
                     id="decab-solutions navbarDropdown"
                     role="button" 
@@ -18,9 +18,10 @@
                 SOLUTIONS 
                 </a>
             <div class="dropdown-menu border-0" aria-labelledby="decab-solutions">
-                <a href="" class="dropdown-item">Marketplace</a>
-                <a href="" class="dropdown-item">eSolution</a>
-                <a href="" class="dropdown-item">eAnalytics</a>
+                <a href="" class="dropdown-item">By Name</a>
+                <a href="" class="dropdown-item">By Slug</a>
+                <a href="" class="dropdown-item">By Category</a>
+                <a href="{% url 'products' %}" class="dropdown-item">All Solutions</a>
             </div>
         </li>
         <!---Learn More-->
@@ -43,7 +44,7 @@
         </li>
         <!---Blog-->
         <li class="nav-item dropdown">
-            <a  class="nav-link dropdown-toggle font-weight-bold"
+            <a  class="nav-link font-weight-bold"
                 href="#"
                 id="decabBlog"
                 role="button"
