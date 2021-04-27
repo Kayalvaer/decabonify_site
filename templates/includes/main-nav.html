@@ -1,5 +1,5 @@
 <!--navbar-->
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<div class="collapse navbar-collapse" id="navbarSupportedContent nested-navbar">
     <ul class="navbar-nav mr-auto text-center pb-4">
         <!---home-->
         <li class="nav-item active">
@@ -17,12 +17,20 @@
                 >
                 SOLUTIONS 
                 </a>
-            <div class="dropdown-menu border-0" aria-labelledby="decab-solutions">
-                <a href="" class="dropdown-item">By Name</a>
-                <a href="" class="dropdown-item">By Slug</a>
-                <a href="" class="dropdown-item">By Category</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Solutions</a>
-            </div>
+            <ul class="dropdown-menu border-0">
+              <li class="nav-link dropdown" a href=""></a></li>
+                    <a class="dropdown-item dropdownright" href="#" 
+                      data-toggle="dropdown">
+                        By Category
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="{% url 'products' %}category=eAnalytics">MarketPlace</li>
+                          <li><a class="dropdown-item" href="{% url 'products' %}category=eSolutions">eSolution</li>
+                          <li><a class="dropdown-item" href="{% url 'products' %}category=Decarbonify Market Place">eAnalytics</li>
+                        </ul>
+                      
+              
+              <a href="{% url 'products' %}" class="dropdown-item">All Solutions</a>
+            </ul>
         </li>
         <!---Learn More-->
         <li class="nav-item dropdown">
