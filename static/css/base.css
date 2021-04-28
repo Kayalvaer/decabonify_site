@@ -30,6 +30,10 @@ body {
     color: #36621b !important;
 }
 
+.detail-info {
+    top: 50px;
+}
+
 
 /* Carousel styling */
 
@@ -271,7 +275,7 @@ footer {
 
 @media (min-width: 1366px) {
     .logo-main-lg {
-        padding-right: 35rem;
+        padding-right: 20rem;
     }
 }
 
@@ -294,7 +298,7 @@ footer {
 
 @media (max-width: 991px) {
     body {
-        height: calc(100vh - 116px);
+        height: calc(100vh - 216px);
     }
 }
 

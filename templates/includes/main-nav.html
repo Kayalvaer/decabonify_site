@@ -18,18 +18,24 @@
                 SOLUTIONS 
                 </a>
             <ul class="dropdown-menu border-0">
-              <li class="nav-link dropdown dropright" a href=""></li>
+              <li class="nav-link dropdown" href="#"></li>
                     <a class="dropdown-item dropdown-toggle" href="#" 
-                      data-toggle="dropdown">
-                        By Category </a>
+                      data-toggle="dropdown"> By Category</a>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="{% url 'products' %}category=eAnalytics">MarketPlace</li>
-                          <li><a class="dropdown-item" href="{% url 'products' %}category=eSolutions">eSolution</li>
-                          <li><a class="dropdown-item" href="{% url 'products' %}category=Decarbonify Market Place">eAnalytics</li>
+                          <li><a class="dropdown-item" href="{% url 'products' %}?category=eAnalytics">MarketPlace</a></li>
+                          <li><a class="dropdown-item" href="{% url 'products' %}?category=eSolutions">eSolution</a></li>
+                          <li><a class="dropdown-item" href="{% url 'products' %}?category=Decarbonify Market Place">eAnalytics</a></li>
+                          <div class="dropdown-divider"></div>
+                          <li><a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc" >By Price</a></li>
+                          <li><a class="dropdown-item" href="{% url 'products' %}?sort=sku&direction=asc" >By Sku</a></li>
+                          <li><a class="dropdown-item" href="{% url 'products' %}?sort=rating&direction=desc" >By Rating</a></li>
+                          <li><a class="dropdown-item" href="{% url 'products' %}?sort=category&direction=asc" >By Category</a></li>
+                          <li><a class="dropdown-item" href="{% url 'products' %}" >All Solutions</a></li>                        
                         </ul>
                       
-              
-              <a href="{% url 'products' %}" class="dropdown-item">All Solutions</a>
+              <li class="nav-link dropright" href="#">
+                    <a href="{% url 'products' %}" class="dropdown-item dropdown-toggle" data-toggle="dropdown">All Solutions</a>              
+              </li>
             </ul>
         </li>
         <!---Learn More-->
@@ -42,7 +48,7 @@
                 aria-haspopup="true"
                 aria-expanded="false"
             >
-            LEARN MORE 
+            BLOG 
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="decab-learn">
                 <a href="" class="dropdown-item">Sustainability</a>
