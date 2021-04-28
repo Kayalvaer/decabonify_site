@@ -1,5 +1,4 @@
-from decimal import Decimal
-from django import settings
+
 
 def wishlist_contents(request):
     
@@ -7,7 +6,7 @@ def wishlist_contents(request):
     total = 0
     product_count = 0
 
-    grand total = total
+    grand_total = total
 
     context = {
         'wishlist_items': wishlist_items,
@@ -15,10 +14,5 @@ def wishlist_contents(request):
         'product_count': product_count,
         'grand_total': grand_total,
     }
-
-    return context
-
-
-    context = {}
 
     return context
