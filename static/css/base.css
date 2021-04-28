@@ -34,6 +34,11 @@ body {
     top: 50px;
 }
 
+a.category-badge>span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
+
 
 /* Carousel styling */
 
