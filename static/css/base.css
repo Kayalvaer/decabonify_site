@@ -55,6 +55,18 @@ a.solution-category-badge>span.badge:hover {
 }
 
 
+/* wishlist bag */
+
+.allproduct-info,
+.detail-info {
+    margin-top: 8rem;
+}
+
+.wishlist-info {
+    margin-top: 20rem;
+}
+
+
 /* Carousel styling */
 
 .carousel-itemthree {
