@@ -34,9 +34,24 @@ body {
     top: 50px;
 }
 
-a.category-badge>span.badge:hover {
-    background: #212529 !important;
+
+/* .product-sort */
+
+a.solution-category-badge>span.badge:hover {
+    background: #36621b !important;
     color: #fff !important;
+}
+
+.scroll-link {
+    cursor: pointer;
+}
+
+.scroll-btn {
+    position: fixed;
+    width: 42px;
+    height: 42px;
+    bottom: 10px;
+    right: 10px;
 }
 
 
