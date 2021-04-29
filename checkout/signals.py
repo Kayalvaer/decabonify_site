@@ -14,7 +14,7 @@ def reload_on_save(sender, instance, created, **kwargs):
 
 
 @receiver(post_delete, sender=OrderLineItem)
-def reload_on_del(sender, instance, **kwargs):
+def reload_on_save(sender, instance, **kwargs):
     """
     Updates total amount on each deletion 
     from the order
