@@ -202,7 +202,9 @@ a.navlink {
 
 /* button */
 
-.btn {
+.btn,
+.edit-link,
+.delete-item {
     cursor: pointer;
 }
 
