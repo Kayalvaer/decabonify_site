@@ -67,6 +67,24 @@ a.solution-category-badge>span.badge:hover {
 }
 
 
+/* toast style */
+
+.message-container {
+    top: 72px;
+    right: 15px;
+    z-index: 99999;
+    position: fixed;
+}
+
+.alert-toast {
+    overflow: visible;
+}
+
+.toast-popper {
+    height: 3px;
+}
+
+
 /* Carousel styling */
 
 .carousel-itemthree {

@@ -1,0 +1,24 @@
+<div class="toast alert-toast bg-danger text-white" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
+  <div class="toast-header">
+    <strong class="mr-auto">Error!</strong>
+  </div>
+  <div class="toast-body bg-danger">
+      <div class="row">
+          <div class="col"><p>{{ message }}</p></div>
+      </div>
+
+      {% if bag_items %}
+      <div class="row">
+          <div class="col text-center bg-danger">
+              <a class="btn btn-white" href="{% url 'whishlist' %}" role="button">View bucket list</a>
+          </div>
+      </div>
+      {% endif %}
+
+      <button class="text-center bottom-toast w-100 bg-warning" data-dismiss="toast" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+            <i class="far fa-times-circle close-icon"></i>
+      </button>
+      
+  </div>
+</div>

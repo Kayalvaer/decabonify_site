@@ -75,7 +75,23 @@
     <!---end carousel wrapper-->
   </header>
 
-  
+    {% if messages %}
+        <div class="message-container">
+          {% for message in messages %}
+            {% with message.level as level %}
+              {% if level == 40 %}
+                {% include 'includes/toasts/error-toast.html' %}
+              {% elif level == 30 %}
+                {% include 'includes/toasts/warning-toast.html' %}
+              {% elif level == 25 %}
+                {% include 'includes/toasts/success-toast.html' %}
+              {% else %}
+                {% include 'includes/toasts/info-toast.html' %}
+              {% endif %}
+            {% endwith %}
+          {% endfor %}
+        </div>
+    {% endif%}
 
     {% block page_header %}
     {% endblock %}
@@ -84,6 +100,15 @@
     {% endblock %}
 
     {% block postloadjs %}
+    <script type="text/javascript">
+        // Shows toast
+        $('.toast').toast('show');
+
+        // Use click to close atoast
+        $(".close-icon").click(function () {
+            $(".toast").toast('hide');
+        });
+    </script>
     {% endblock %}
 
      <!----footer section ----->
