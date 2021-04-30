@@ -5,13 +5,13 @@ from .forms import OrderForm
 
 
 def checkout(request):
-    wishlist = request.session.get('bag', {})
+    wishlist = request.session.get('wishlist', {})
     if not wishlist:
         messages.error(
         request, "Oops, seems something went wrong!")
         return redirect(reverse('products'))
 
-    order_form = orderForm()
+    order_form = OrderForm()
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,

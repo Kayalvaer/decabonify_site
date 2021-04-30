@@ -119,6 +119,7 @@ div.row.justify-content-center,
 div.container.carousel-text {
     background-color: rgba(12, 62, 7, 0.379);
     bottom: 4rem;
+    padding: 2rem 6rem 2rem 6rem;
 }
 
 .carousel-caption p {
@@ -251,13 +252,15 @@ a.navlink {
 
 /* test */
 
+
+/* 
 html {
     height: 100%;
 }
 
 a {
     color: #faebd7;
-}
+} */
 
 
 /* market section */
@@ -275,10 +278,6 @@ a {
 .market-search {
     margin-bottom: 4rem;
     border-color: #36621b;
-}
-
-.form-control {
-    border-radius: 15%;
 }
 
 
