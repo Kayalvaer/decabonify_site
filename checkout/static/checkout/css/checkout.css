@@ -5,9 +5,6 @@
 }
 
 
-/* ------------------------------------------------checkout content */
-
-
 /* ------------------------------------------------Loading spinner */
 
 #loader {
@@ -103,15 +100,11 @@ select option[value=""] {
 
 #payment-form,
 .form-control,
-#card-element {
+#card-content {
     border-bottom: 1px solid black;
     box-shadow: 0 1px 3px 0 #e6ebf1;
     -webkit-box-shadow: 0 8px 6px -6px #6c757d;
     box-shadow: 0 8px 6px -6px #6c757d;
-}
-
-#card-element {
-    outline: 10px solid red;
 }
 
 input[type=text] {
