@@ -21,6 +21,8 @@
 <!--adapted From Code Institute Project Boutique Ado-->
 {% block content %}
     <div class="overlay"></div>
+
+    {% if wishlist_items %}
         <div class="container basket-container">
 
                 <div id="loader">
@@ -33,7 +35,7 @@
                 <div class="row">
                     <div class="col">
                         <hr>
-                        <h2 class="mb-4 text-success text-bold text-uppercase">Checkout</h2>
+                        <h2 class="mb-4 text-success text-bold text-uppercase">Shopping Checkout</h2>
                         <hr>
                     </div>
                 </div>
@@ -78,12 +80,12 @@
                         <p class="text-success">Complete form to order</p>
                         <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                             {% csrf_token %}
-                            <fieldset class="rounded px-3 mb-5">
+                            <fieldset class="px-3 mb-4">
                                 <legend class="fieldset-label small form-legend px-2 w-auto uppercase info-summary text-dark">Details</legend>
                                         {{ order_form.full_name | as_crispy_field }}
                                         {{ order_form.email | as_crispy_field }}
                             </fieldset>
-                            <fieldset class="rounded px-3 mb-5">
+                            <fieldset class="px-3 mb-4">
                                 <legend class="fieldset-label small form-legend px-2 w-auto uppercase info-summary text-dark">Delivery</legend>
                                         {{ order_form.phone_number | as_crispy_field }}
                                         {{ order_form.country | as_crispy_field }}
@@ -107,13 +109,13 @@
                                         </div>
                             </fieldset>
                             <fieldset class="px-3">
-                                <legend class="fieldset-label pt-2 w-auto uppercase text-success">Continue with Payment</legend>
+                                <legend class="fieldset-label pt-2 w-auto uppercase text-success small">Payment</legend>
                                         <!-- For Stripe card elements -->
-                                        <div class="mb-3" id="card-content"></div>
+                                        <div class="" id="card-content"></div>
 
                                         <!-- For displaying form errors or fails -->
                                         <div class="mb-3 text-warning" id="card-fails" role="alert"></div>
-                                        <input type="hidden" value="{{ client_secret }}" name="client_secret">
+                                        {% comment %} <input type="hidden" value="{{ client_secret }}" name="client_secret"> {% endcomment %} 
                             </fieldset>
 
                             <div class="render-btn text-right mt-5 mb-2">
@@ -144,4 +146,20 @@
         </div>
     </div>
                 
+{% else %}
+<div class="container clear-bag text-center mt-5">
+    <h3>Are you sure you dont want to buy anything?</h3>
+    <a class="btn btn-success" href="{% url 'products' %}" role="button">All products</a>
+</div>
+{% endif %} 
+
+
+{% endblock %}
+
+<!--Stripe functionality-->
+{% block postload_js %}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}

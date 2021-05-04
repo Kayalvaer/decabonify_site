@@ -3,20 +3,19 @@ from .models import Order, OrderLineItem
 
 
 # Register your models here.
-class OrederLineAdminInLine(admin.StackedInline):
+class OrderLineAdminInLine(admin.StackedInline):
     model = OrderLineItem
     readonly_fields = ('lineitem_total',) 
 
 
 class OrderAdmin(admin.ModelAdmin):
-    inlines = (OrederLineAdminInLine,) 
+    inlines = (OrderLineAdminInLine,) 
 
     readonly_fields = ("order_number",
                        "date",
                        "delivery_cost",
                        "order_total",
                        "grand_total",
-                       "original_bag",
                        "stripe_pid",)
 
     fields = ("order_number",
