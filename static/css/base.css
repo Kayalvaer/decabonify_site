@@ -166,6 +166,10 @@ div.container.carousel-text {
 
 /* Navigation */
 
+.text-basket {
+    color: #ff4500;
+}
+
 .main-nav {
     z-index: 999;
     position: absolute;

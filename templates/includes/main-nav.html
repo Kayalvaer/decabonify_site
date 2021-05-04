@@ -37,7 +37,7 @@
             </ul>
         </li>
         <!---Learn More-->
-        <li class="nav-item dropdown">
+        {% comment %} <li class="nav-item dropdown">
             <a class="nav-link font-weight-bold" 
                 href="#" 
                 id="decab-learn" 
@@ -53,7 +53,7 @@
                 <a href="" class="dropdown-item">Climate Change</a>
                 <a href="" class="dropdown-item">ESG rating</a>
             </div>
-        </li>
+        </li> {% endcomment %}
         <!---Blog-->
         <li class="nav-item dropdown">
             <a  class="nav-link font-weight-bold"
@@ -130,7 +130,7 @@
       <li class="nav-item">
         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" 
           href="{% url 'view_wishlist' %}">
-            <div class="text-center text-warning">
+            <div class="text-center text-basket">
                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                 <p class="my-0">
                     {% if grand_total %}
