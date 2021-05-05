@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-wrapper">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+
+    {% block carousel %}
+    {% endblock %}
+{% endblock %}
+
+<!--adapted From Code Institute Project Boutique Ado-->
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container checkoutSuccessWrap">
+
+        <div id="loader">
+            <h1 class="loading-roll">
+                <span class="text-success loader-icon">
+                    <i class="fas fa-3x fa-spinner fa-pulse"></i>
+                </span>
+            </h1>
+        </div>
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h2 class="mb-4 text-success text-bold text-uppercase">Thanks for shopping with us!</h2>
+                <hr>
+                <p class="">Please find details for your order. A confirmation will be sent to your email address: <strong>{{ order.email }}</strong></p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-lg-7"></div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-7 text-right">
+                <a href="{% url 'products' %}" class="btn btn-success rounded-0 my-2">
+                    <span class="icon mr-2 main-icons">
+                        <i class="fas fa-hand-holding fa-lg"></i>
+                    </span>
+                    <span class="text-uppercase">Back to Products</span>
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
