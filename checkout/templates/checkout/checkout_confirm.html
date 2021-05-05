@@ -38,15 +38,186 @@
         </div>
 
         <div class="row">
-            <div class="col-12 col-lg-7"></div>
+            <div class="col-12 col-lg-7 ">
+                <div class="p-3 border border-light order-success-wrap shadow p-3 mb-5 rounded">
+                    <!--Order Reference/Info-->
+                    <div class="row mt-2">
+                        <div class="col">
+                            <h5 class="text-muted">Order Content:</h5>
+                        </div>
+                    </div>
+                    <!--Order Content split-->
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <h5 class="text-success font-weight-bold mb-1">Order Reference:</h5>
+                        </div>
+                        <div class="text-md-right col-12 col-md-8">
+                            <p class="text-success mb-1">{{ order.order_number }}</p>
+                        </div>
+                    </div>
+
+                    <!--Order date split-->
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <h5 class="text-success font-weight-bold mb-1">Order date:</h5>
+                        </div>
+                        <div class="text-md-right col-12 col-md-8">
+                            <p class="text-success mb-1 small">{{ order.order_date }}</p>
+                        </div>
+                    </div>
+
+
+                    <!--Order Details-->
+                    <div class="row my-4">
+                        <div class="col">
+                            <h5 class="text-muted">Order Details:</h5>
+                        </div>
+                    </div>
+
+                    {% for item in order.lineitems.all %}
+                    <!--Order Details split-->
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <h5 class="text-success font-weight-bold mb-1 font-weight-light">{{ item.product.name }}</h5>
+                        </div>
+                        <div class="text-md-right col-12 col-md-8">
+                            <p class="text-success mb-1 small">{{ item.quantity }} @ ${{ item.product.price }} each</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+            
+                    <!--Delivery Details-->
+                    <div class="row my-4">
+                        <div class="col">
+                            <h5 class="text-muted ">Delivery Details:</h5>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <h5 class="text-success font-weight-bold mb-1 font-weight-light">Full Name</h5>
+                        </div>
+                        <div class="text-md-right col-12 col-md-8">
+                            <p class="text-success mb-1 small">{{ order.full_name }}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <h5 class="text-success font-weight-bold mb-1 font-weight-light">Address 1</h5>
+                        </div>
+                        <div class="text-md-right col-12 col-md-8">
+                            <p class="text-success mb-1 small">{{ order.street_address1 }}</p>
+                        </div>
+                    </div>
+                   
+                    {% if order.street_address2 %}
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <h5 class="text-success font-weight-bold mb-1 font-weight-light">Address 2</h5>
+                        </div>
+                        <div class="text-md-right col-12 col-md-8">
+                            <p class="text-success mb-1 small">{{ order.street_address1 }}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if order.county %}
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <h5 class="text-success font-weight-bold mb-1 font-weight-light">County</h5>
+                        </div>
+                        <div class="text-md-right col-12 col-md-8">
+                            <p class="text-success mb-1 small">{{ order.county }}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+                    
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <h5 class="text-success font-weight-bold mb-1 font-weight-light">Town or City</h5>
+                        </div>
+                        <div class="text-md-right col-12 col-md-8">
+                            <p class="text-success mb-1 small">{{ order.town_or_city }}</p>
+                        </div>
+                    </div>
+                    
+                    {% if order.postcode %}
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <h5 class="text-success font-weight-bold mb-1 font-weight-light">Postal Code</h5>
+                        </div>
+                        <div class="text-md-right col-12 col-md-8">
+                            <p class="text-success mb-1 small">{{ order.postcode }}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+                  
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <h5 class="text-success font-weight-bold mb-1 font-weight-light">Country</h5>
+                        </div>
+                        <div class="text-md-right col-12 col-md-8">
+                            <p class="text-success mb-1 small">{{ order.country }}</p>
+                        </div>
+                    </div>
+                    <!--Delivery Content split-->
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <h5 class="text-success font-weight-bold mb-1 font-weight-light">Contact Number:</h5>
+                        </div>
+                        <div class="text-md-right col-12 col-md-8">
+                            <p class="text-success mb-1 small">{{ order.contact_number }}</p>
+                        </div>
+                    </div>
+
+                    <!--Billing Details-->
+                    <div class="row my-4">
+                        <div class="col">
+                            <h5 class="text-muted">Billing Details:</h5>
+                        </div>
+                    </div>
+                    <!--Billing split-->
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <h5 class="text-success font-weight-bold mb-1 font-weight-light">Order Total</h5>
+                        </div>
+                        <div class="text-md-right col-12 col-md-8">
+                            <p class="text-success mb-1 small">{{ order.order_total }}</p>
+                        </div>
+                    </div>
+                    
+                    {% if order.delivery_cost %}
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <h5 class="text-success font-weight-bold mb-1">Delivery Cost</h5>
+                        </div>
+                        <div class="text-md-right col-12 col-md-8">
+                            <p class="text-success mb-1 small">{{ order.delivery_cost }}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <h5 class="text-success font-weight-bold mb-1 font-weight-light">Grand Total</h5>
+                        </div>
+                        <div class="text-md-right col-12 col-md-8">
+                            <p class="text-success mb-1 small">{{ order.grand_total }}</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
         </div>
-        <div class="row">
+        <div class="row mx-4 my-5">
             <div class="col-12 col-lg-7 text-right">
                 <a href="{% url 'products' %}" class="btn btn-success rounded-0 my-2">
                     <span class="icon mr-2 main-icons">
-                        <i class="fas fa-hand-holding fa-lg"></i>
+                        <i class="fas fa-hands fa-lg"></i>
                     </span>
-                    <span class="text-uppercase">Back to Products</span>
+                    <span class="text-uppercase">Back To Products</span>
                 </a>
             </div>
         </div>
