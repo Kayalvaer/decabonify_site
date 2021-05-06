@@ -5,7 +5,7 @@ from .models import OrderLineItem
 
 
 @receiver(post_save, sender=OrderLineItem)
-def reload_on_save(sender, instance, created, **kwargs):
+def update_on_save(sender, instance, created, **kwargs):
     """
     Updates total amount on each addition of an 
     item to the order
@@ -14,10 +14,10 @@ def reload_on_save(sender, instance, created, **kwargs):
 
 
 @receiver(post_delete, sender=OrderLineItem)
-def reload_on_delete(sender, instance, **kwargs):
+def update_on_delete(sender, instance, **kwargs):
     """
     Updates total amount on each deletion 
     from the order
     """
-    print('delete signal activated!') 
+    """ print('delete signal activated!')  """
     instance.order.update_total()

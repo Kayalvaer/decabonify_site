@@ -16,6 +16,7 @@ import json
 @require_POST
 def cache_checkout_data(request):
     try:
+        print("reached checkout data")
         pid = request.POST.get("client_secret").split("_secret")[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
         stripe.PaymentIntent.modify(pid, metadata={
@@ -25,6 +26,7 @@ def cache_checkout_data(request):
         })
         return HttpResponse(status=200)
     except Exception as e:
+        print(e)
         messages.error(request, "Oops, something went wrong \
             with your payment. Please try again later")
         return HttpResponse(content=e, status=400)

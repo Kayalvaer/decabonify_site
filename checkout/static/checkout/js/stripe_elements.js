@@ -95,6 +95,7 @@ form.addEventListener('submit', function(ev) {
                 }
             },
         }).then(function(result) {
+            console.log(result);
             if (result.error) {
                 var errorDiv = document.getElementById('card-negatives');
                 var html = `
@@ -108,7 +109,7 @@ form.addEventListener('submit', function(ev) {
                 card.update({ 'disabled': false});
                 $('#submit-btn').attr('disabled', false);
             } else {
-                if (result.paymentIntent.status === 'successful') {
+                if (result.paymentIntent.status === "succeeded") {
                     form.submit();
                 }
             }

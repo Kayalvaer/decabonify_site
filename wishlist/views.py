@@ -80,9 +80,9 @@ def remove_in_wishlist(request, item_id):
                 {product.name} removed out of the basket')
 
         request.session['wishlist'] = wishlist
-        return HttpResponse(status=200)
+        return redirect(reverse('view_wishlist'))
 
     except Exception as e:
         messages.error(
             request, f'Oops! Something went wrong when removing item: {e}')
-        return HttpResponse(status=500)
+        return redirect(reverse('view_wishlist'))
