@@ -255,18 +255,9 @@ a.navlink {
     color: white;
 }
 
-
-/* test */
-
-
-/* 
-html {
-    height: 100%;
+.btn input {
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color: .15s ease-in-out, box-shadow: .15s ease-in-out;
 }
-
-a {
-    color: #faebd7;
-} */
 
 
 /* market section */
@@ -292,6 +283,63 @@ a {
 footer {
     background-color: #36621b !important;
     margin-top: 10rem;
+}
+
+
+/* Allauth form styling and formatting */
+
+.allauth-form-style p {
+    margin-top: 1.5rem;
+    /* mt-4 */
+    color: #6c757d;
+    /* text-secondary */
+}
+
+.allauth-form-style input {
+    border-color: #000;
+    border-radius: 0;
+}
+
+.allauth-form-style label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-style input::placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-style button,
+.allauth-form-style input[type='submit'] {
+    /* btn */
+    display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #000;
+    border: 1px solid #000;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.allauth-form-style button:hover,
+.allauth-form-style input[type='submit']:hover {
+    color: #fff;
+    background-color: #222;
+    border-color: #222;
+}
+
+.allauth-form-style a {
+    color: #17a2b8;
+    /* text-info */
 }
 
 

@@ -1,1 +1,22 @@
 {% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <div class="container d-flex justify-content-center align-items-center w-100 vh-100 allauth-block">
+        
+            <div class="info-overlay text-center allauth-form-style">
+                <div class="row">
+                    <div class="col">
+                        {% block inner_content %}
+                        {% endblock %}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>or <br></p>
+                        <a class="btn btn-success" href="{% url 'products' %}" role="button">See the Collection</a>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+{% endblock %}
