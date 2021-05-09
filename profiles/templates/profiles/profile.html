@@ -45,17 +45,78 @@
                         <div class="row mt-5 mb-3">
                             <div class="col basket-total uppercase">
                                 <h4 class="text-muted">Purchase History</h4>
-                                {{ orders }}
+                                
+                            </div>
+                        </div>
+                        <div id="accordion">
+                            <div class="card history-order ">
+                                <div class="card-header bg-success" id="headingOne">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link text-uppercase button-accordion text-dark" data-toggle="collapse" data-target="#collapseOne"
+                                             aria-expanded="true" aria-controls="collapseOne">
+                                            Order History
+                                        </button>
+                                    </h5>
+                                </div>
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="card-body">
+                                    {% if orders %}
+                                    <div class="table-responsive ">
+                                    <!--Table content from Boutique Ado-Code Institute-->
+                                        <table class="table table-sm table-borderless">
+                                            <thead class="table-header">
+                                                <tr>
+                                                    <th>Order Reference</th>
+                                                    <th>Date</th>
+                                                    <th>Items</th>
+                                                    <th>Order Total Amount</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% for order in orders %}
+                                                <tr>
+                                                    <td>
+                                                        <a href="{% url 'order_history' order.order_number %}"
+                                                            title="{{ order.order_number }}" class="order_reference">
+                                                                {{ order.order_number|truncatechars:6 }}
+                                                        </a>
+                                                    </td>
+                                                    <td class="font-weight-light">{{ order.date }}</td>
+                                                    <td>
+                                                        <ul class="list-unstyled">
+                                                            {% for item in order.lineitems.all %}
+                                                            <li class="text-sm">
+                                                               {% if item.product.has_sizes %}
+                                                                Size {{ item.product.size|upper }}
+                                                                    {% endif %}{{ item.product.name }} x{{ item.quantity }}
+                                                            </li>
+                                                            {% endfor %}
+                                                        </ul>
+                                                    </td>
+                                                    <td>${{ order.grand_total }}</td>
+                                                </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                        </table>
+                                        {% else %}
+                                        <p>Take a tour of our range of solution we offer <br>
+                                            Feel free to contact us:</p>
+                                        <div class="row">
+                                            <div class="col">
+                                                <a class="btn btn-success" href="{% url 'products' %}" role="button">View solutions</a>
+                                            </div>
+                                        </div>
+                                        {% endif %}
+                                    </div>
                             </div>
                         </div>
                     </div>
 
-                    <hr>
-                    <div class="container empty-bag text-center mt-5">
-                        <a class="text-success" href="{% url 'home' %}" role="button">Back to Home Page</a>
-                    </div>
-                </div>
-
             </div>
         </div>
+        <hr>
+        <div class="container empty-bag text-center mt-5">
+            <a class="text-success" href="{% url 'home' %}" role="button">Back to Home Page</a>
+        </div>
+
 {% endblock %}

@@ -213,12 +213,21 @@
         </div>
         <div class="row mx-4 my-5">
             <div class="col-12 col-lg-7 text-right">
-                <a href="{% url 'products' %}" class="btn btn-success rounded-0 my-2">
-                    <span class="icon mr-2 main-icons">
-                        <i class="fas fa-hands fa-lg"></i>
-                    </span>
-                    <span class="text-uppercase">Back To Products</span>
-                </a>
+                {% if from_profile %}
+                    <a href="{% url 'profile' %}" class="btn btn-outline-dark rounded-0 my-2">
+                        <span class="icon mr-2 main-icons">
+                            <i class="fas fa-user fa-lg"></i>
+                        </span>
+                        <span class="text-uppercase">Back To Profile</span>
+                    </a>
+                {% else %}
+                    <a href="{% url 'products' %}" class="btn btn-success rounded-0 my-2">
+                        <span class="icon mr-2 main-icons">
+                            <i class="fas fa-hands fa-lg"></i>
+                        </span>
+                        <span class="text-uppercase">Back To Products</span>
+                    </a>
+                {% endif %}
             </div>
         </div>
     </div>

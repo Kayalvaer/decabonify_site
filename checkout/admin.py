@@ -20,6 +20,7 @@ class OrderAdmin(admin.ModelAdmin):
                        "stripe_pid",)
 
     fields = ("order_number",
+              "user_profile",
               "full_name",
               "email",
               "phone_number",
