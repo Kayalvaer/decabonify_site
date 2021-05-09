@@ -1,0 +1,31 @@
+
+Good day {{ order.full_name }}!
+
+Thank you for shopping at {{ company.name|upper }}! 
+
+We try our best to offer you the best service as possible.
+
+Please find a brief summary of your order for your record:
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+
+Order Total: ${{ order.order_total }}
+Delivery: ${{ order.delivery_cost }} if included.
+Grand Total: ${{ order.grand_total }}
+
+Your order will be shipped to {{ order.street_address1 }} in {{ order.town_or_city }}, {{ order.country }}.
+
+If you have a registered account on our website, kindly log in and access it through "My Profile" section.
+Here you are able to check your order history and verify your order list.
+If you'd like, you can also share reviews about your service experience, so you can help other customers 
+with your feedback!
+
+If you have any questions, feel free to contact our Customer Service Representative at
+{{ contact_email }}. Our team will be delighted to assist you.
+
+Thank you for your order!
+
+Sincerely,
+
+Decarbonify
