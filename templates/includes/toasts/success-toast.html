@@ -4,20 +4,39 @@
   </div>
   <div class="toast-body bg-success">
       <div class="row">
-          <div class="col"><p>{{ message }}</p></div>
+          <div class="col">
+            <p>{{ message }}</p>
+          </div>
       </div>
+      
+     <!--Check if there is a grand total and if on profile page --->
+     {% if grand_total and not on_profile_page %}
+      <p class="bg-transparent text-dark py-2"> Basket has {{ product_count }} Item/Items</p>
 
-      {% if bag_items %}
+        <div class="wishlist-alert-wrap">
+          {% for item in bag_items %}
+          <div class="row">
+            <div class="col-3 my-2">
+              <img class="w-100" src="{{ item.product.image.url }}">
+            </div>
+            <div class="col-9">
+              <h5 class="small my-0"><strong>{{ item.product.name }}</strong></h5>
+              <p class="text-small">Qty : {{ item.quantity }}</p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
       <div class="row">
           <div class="col text-center bg-success">
-              <a class="btn btn-white" href="{% url 'whishlist' %}" role="button">View bucket list</a>
+              <a class="btn btn-white" href="{% url 'view_wishlist' %}" role="button">View bucket list</a>
           </div>
       </div>
       {% endif %}
 
       <button class="text-center bottom-toast w-100 bg-success">
         <span aria-hidden="true">&times;</span>
-            <i class="far fa-times-circle close-icon"></i>
+            <i class="fas fa-times-circle close-icon"></i>
       </button>
   </div>
 </div>

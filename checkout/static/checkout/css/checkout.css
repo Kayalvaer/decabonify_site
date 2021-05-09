@@ -107,7 +107,7 @@ select option {
 
 select:invalid,
 select option[value=""] {
-    color: #bbbdba !important;
+    color: rgb(187, 189, 186) !important;
 }
 
 #payment-form,

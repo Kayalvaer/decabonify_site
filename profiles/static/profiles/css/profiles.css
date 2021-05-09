@@ -1,3 +1,7 @@
 .profile-wrapper {
     margin-top: 8rem;
 }
+
+.profile-update-form input {
+    color: #f5f5f5;
+}
