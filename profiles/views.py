@@ -6,7 +6,8 @@ from .forms import UserProfileForm
 
 def profile(request):
     """ To display client profile """
-    profile = get_object_or_404(UserProfile, user=request.user)
+    print(request.user.id)
+    profile = get_object_or_404(UserProfile, pk=request.user.id)
 
     if request.method == "POST":
         form = serProfileForm(request.POST, instance=profile)

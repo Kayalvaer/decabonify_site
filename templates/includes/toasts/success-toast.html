@@ -14,7 +14,7 @@
       <p class="bg-transparent text-dark py-2"> Basket has {{ product_count }} Item/Items</p>
 
         <div class="wishlist-alert-wrap">
-          {% for item in bag_items %}
+          {% for item in wishlist_items %}
           <div class="row">
             <div class="col-3 my-2">
               <img class="w-100" src="{{ item.product.image.url }}">
@@ -35,7 +35,7 @@
       {% endif %}
 
       <button class="text-center bottom-toast w-100 bg-success">
-        <span aria-hidden="true">&times;</span>
+        <span aria-hidden="true"></span>
             <i class="fas fa-times-circle close-icon"></i>
       </button>
   </div>
