@@ -4,6 +4,6 @@ from django.shortcuts import render
 
 def index(request):
     """ A view to return the index page """
-
+    print(request.method)
     return render(request, 'home/index.html')
     

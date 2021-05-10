@@ -8,7 +8,7 @@
             "price": 850.00,
             "category": 1,
             "rating": 5,
-            "image_url": "",
+            "image_url": "https://kopyr.ca/wp-content/uploads/2020/09/christina-wocintechchat-com-bVNKEw62dFI-unsplash-1-1.jpg",
             "image": "christina-wocintechchat-com-bVNKEw62dFI-unsplash.jpg"
         }
     },
@@ -22,7 +22,7 @@
             "price": 1500.00,
             "category": 1,
             "rating": 4,
-            "image_url": "",
+            "image_url": "https://blog.tcea.org/wp-content/uploads/2021/01/pexels-free-creative-stuff-1476321-scaled.jpg",
             "image": "pexels-free-creative-stuff-1476321.jpg"
         }
     },
@@ -36,7 +36,7 @@
             "price": 900.00,
             "category": 1,
             "rating": 5,
-            "image_url": "",
+            "image_url": "https://www.compasshrg.com/wp-content/uploads/pexels-pixabay-355952.jpg",
             "image": "pexels-pixabay-355952.jpg"
         }
     },
@@ -50,7 +50,7 @@
             "price": 750.00,
             "category": 1,
             "rating": 4,
-            "image_url": "",
+            "image_url": "https://www.if.org.uk/wp-content/uploads/2020/08/IF_Blog_Apprenticeships-thisisengineering-raeng-WVNLyCPCmIE-unsplash.jpg",
             "image": "thisisengineering-raeng-WVNLyCPCmIE-unsplash.jpg"
         }
     },
@@ -64,7 +64,7 @@
             "price": 700.00,
             "category": 2,
             "rating": 5,
-            "image_url": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F01%2F56%2Fed%2F0156edbc6920a297bda417008fff8b9b.jpg&imgrefurl=https%3A%2F%2Fwww.pinterest.co.uk%2Fpin%2F517702919642684097%2F&tbnid=PRwRUJxXFD6lJM&vet=10CAcQxiAoB2oXChMI-ICd3paO8AIVAAAAAB0AAAAAEAc..i&docid=FW1248ZpuV8duM&w=960&h=933&itg=1&q=lca%20analysis&ved=0CAcQxiAoB2oXChMI-ICd3paO8AIVAAAAAB0AAAAAEAc",
+            "image_url": "https://i.pinimg.com/originals/01/56/ed/0156edbc6920a297bda417008fff8b9b.jpg",
             "image": "LCA-image.jpeg"
         }
     },
@@ -78,7 +78,7 @@
             "price": 950.00,
             "category": 2,
             "rating": 5,
-            "image_url": "https://images.app.goo.gl/k1zm7ASdbjBsgiZp7",
+            "image_url": "https://worlduniversityofdesign.ac.in/assets/images/bgs/product-design-banner.jpg",
             "image": "designer-sketching-drawing-design-development-260nw-1569074104.jpeg"
         }
     },
@@ -92,7 +92,7 @@
             "price": 960.00,
             "category": 2,
             "rating": 5,
-            "image_url": "https://images.app.goo.gl/jDSsLtXzF8jBfVsN9",
+            "image_url": "https://www.nobia.com/globalassets/investors/risks/risks-process_550x379.jpg",
             "image": "risks-process_550x379.jpeg"
         }
     },
@@ -106,7 +106,7 @@
             "price": 560.00,
             "category": 3,
             "rating": 4,
-            "image_url": "https://images.app.goo.gl/H7BXHPXC2GfyFWMdA",
+            "image_url": "https://cdn.banyanhill.com/wp-content/uploads/2019/12/20153203/shutterstock_1023559927-440x264.jpg",
             "image": "shutterstock_1023559927-440x264.jpeg"
         }
     },
@@ -120,7 +120,7 @@
             "price": 820.00,
             "category": 3,
             "rating": 5,
-            "image_url": "https://images.app.goo.gl/agiNkMeoXSw1xMP88",
+            "image_url": "https://usabilla.com/blog/wp-content/uploads/2018/06/analytics-header.jpg",
             "image": "analytics-header.jpeg"
         }
     },
@@ -134,7 +134,7 @@
             "price": 620.00,
             "category": 3,
             "rating": 5,
-            "image_url": "https://images.app.goo.gl/zhmAHzF4AkCbDZfD8",
+            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdomALcqd9zVcxvCslVH9Dv7g7IESH7BXb1w&usqp=CAU",
             "image": "ESG-rating.jpeg"
         }
     },
@@ -148,7 +148,7 @@
             "price": 2500.00,
             "category": 3,
             "rating": 5,
-            "image_url": "https://images.app.goo.gl/DFTyhdYjFknecBaz9",
+            "image_url": "https://www.testingtime.com/app/uploads/2019/02/working-as-a-ux-researcher-hero-image.jpg",
             "image": "ux-researcher-hero-image.jpeg"
         }
     }

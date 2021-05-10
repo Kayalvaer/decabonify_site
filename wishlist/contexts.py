@@ -9,7 +9,12 @@ def wishlist_contents(request):
     wishlist = request.session.get('wishlist', {})
 
     for item_id, quantity in wishlist.items():
-        product = get_object_or_404(Product, pk=item_id)
+        try:
+            #product = get_object_or_404(Product, pk=item_id)
+            product = Product.objects.get(id=item_id)
+        except Exception as e:
+            print(e)
+            continue
         total += quantity * product.price
         product_count += quantity
         wishlist_items.append({
