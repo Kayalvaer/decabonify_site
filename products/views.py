@@ -76,7 +76,7 @@ def product_detail(request, product_id):
 @login_required
 def add_product(request):
     if not request.user.is_superuser:
-        messages.error(request, "Sorry, you cannot access this page.")
+        messages.error(request, "Sorry, you cannot access this page if you not owner.")
         return redirect(reverse('home'))
 
     if request.method == 'POST':
@@ -100,7 +100,7 @@ def add_product(request):
 @login_required
 def edit_product(request, product_id):
     if not request.user.is_superuser:
-        messages.error(request, "Sorry, you don't have access to this page.")
+        messages.error(request, "Sorry, you cannot access this page if you not owner.")
         return redirect(reverse('home')) 
 
     """ Update solutions provided """
@@ -130,12 +130,11 @@ def edit_product(request, product_id):
 @login_required
 def delete_product(request, product_id):
     if not request.user.is_superuser:
-        messages.error(request, "Sorry, access to the page denied.")
+        messages.error(request, "Sorry, you cannot access this page if you not owner.")
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
 
     product.delete()
     messages.success(request, f'{product.name} successfully deleted')
-
     return redirect(reverse('products'))
