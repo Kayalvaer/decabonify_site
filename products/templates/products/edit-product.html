@@ -1,23 +1,23 @@
 {% extends "base.html" %}
 {% load static %}
-{% load bag_tools %}
+{% load wishlist_tools %}
 
 {% block extra_css %}
 {% endblock %}
 
-{% block extra_title %}Add Product{% endblock %}
+{% block extra_title %}Edit Product{% endblock %}
 
 {% block page_header %}
 {% endblock %}
 
 {% block content %}
 <h2 class="page-title text-center uppercase">Manage Solutions</h2>
-<h3 class="text-center">Add Solution</h3>
+<h3 class="text-center">Edit Solutions</h3>
 <hr>
 <div class="container">
     <div class="row">
         <div class="col-12 col-md-6">
-            <form method="POST" action="{% url 'add_product' %}" class="form mb-3" enctype="multipart/form-data">
+            <form method="POST" action="{% url 'edit-product' product_id %}" class="form mb-3" enctype="multipart/form-data">
             {% csrf_token %}
                     {% for field in form %}
                         {% if field.name != 'image' %}
@@ -27,8 +27,8 @@
                         {% endif %}
                     {% endfor %}
             <div class="text-right">
-                <a class=" btn btn-outline-dark" href="{%  url 'products' %}">Cancel</a>
-                <button class="btn btn-success" type="Submit">Add Product</button>
+                <a class=" btn btn-outline-dark" href="{%  url 'products' %}"><i class="fas fa-window-close mr-1"></i>Cancel</a>
+                <button class="btn btn-success" type="Submit"><i class="fas fa-retweet"></i> Edit Solution</button>
             </div>
             </form>
         </div>

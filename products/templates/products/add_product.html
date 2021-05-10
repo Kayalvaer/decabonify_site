@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+{% load wishlist_tools %}
+
+{% block extra_css %}
+{% endblock %}
+
+{% block extra_title %}Add Product{% endblock %}
+
+{% block page_header %}
+{% endblock %}
+
+{% block content %}
+<h2 class="page-title text-center uppercase">Manage Solutions</h2>
+<h3 class="text-center">Add Solution</h3>
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <form method="POST" action="{% url 'add_product' %}" class="form mb-3" enctype="multipart/form-data">
+            {% csrf_token %}
+                    {% for field in form %}
+                        {% if field.name != 'image' %}
+                            {{ field | as_crispy_field }}
+                        {% else %}
+                            {{ field }}
+                        {% endif %}
+                    {% endfor %}
+            <div class="text-right">
+                <a class=" btn btn-outline-dark" href="{%  url 'products' %}"><i class="fas fa-window-close mr-1"></i>Cancel</a>
+                <button class="btn btn-success" type="Submit"><i class="fas fa-plus-square mr-1"></i>Add Product</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

@@ -11,8 +11,8 @@ class ProductForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         categories = Category.objects.all()
-        sku = [(c.id, c.get_sku()) for c in categories]
+        slug = [(c.id, c.get_slug()) for c in categories]
 
-        self.fields['category'].choices = sku
+        self.fields['category'].choices = slug
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'rounded-0'

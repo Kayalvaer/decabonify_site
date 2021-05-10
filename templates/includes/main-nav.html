@@ -118,7 +118,7 @@
         <div class="dropdown-menu" aria-labelledby="myaccountDropdown">
           {% if request.user.is_authenticated %}
                 {% if request.user.is_superuser %}
-                  <a class="dropdown-item" href="#">Manage Project</a>
+                  <a class="dropdown-item" href="{% url 'add_product' %}">Manage Solutions</a>
                 {% endif %}
                   <a class="dropdown-item" href="{% url 'profile' %}">Profile</a>
                   <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
