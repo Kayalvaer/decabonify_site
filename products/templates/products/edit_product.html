@@ -23,7 +23,7 @@
                         {% if field.name != 'image' %}
                             {{ field | as_crispy_field }}
                         {% else %}
-                            <img src="{{field.image.url}}" style="display:none;height:100px;width:100px;padding:10px;" id="uploadedImage" />
+                            <img src="/media/{{field.value}}" style="display:block;height:100px;width:100px;padding:10px;" id="uploadedImage" />
                             {{ field }}
                         {% endif %}
                     {% endfor %}
@@ -36,5 +36,33 @@
     </div>
 </div>
 
+
+{% endblock %}
+
+{% block postload_js %}
+<script>
+$(document).ready(function(){
+    console.log("document ready");
+    $('#id_image').on('change',function(){
+        console.log('image changed');
+        var file = document.getElementById('id_image').files[0]
+        displayImageOnChange(file);
+    });
+});
+
+function displayImageOnChange(file){
+    var reader = new FileReader();
+    reader.onload = function(e){
+        var displayimage = document.getElementById('uploadedImage');
+        console.log(e.target.result);
+        displayimage.src = e.target.result;
+        $('#uploadedImage').css('display','block');
+    }
+    reader.readAsDataURL(file);
+}
+
+
+
+</script>
 
 {% endblock %}
