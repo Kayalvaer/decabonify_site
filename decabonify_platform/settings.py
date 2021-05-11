@@ -15,7 +15,7 @@ import dj_database_url
 if os.path.exists("env.py"):
     import env
 from pathlib import Path
-
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '4yt&fszz&os1pw)5p!9yvwop0a_c*l2wcgr=c5cgfspb9-zf)l'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['51e40513ac65.ngrok.io',
                 '127.0.0.1',
@@ -191,3 +191,4 @@ STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 DEFAULT_FROM_EMAIL = 'admin@decarbonify.com' 
+django_heroku.settings(locals())
