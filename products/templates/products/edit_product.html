@@ -23,6 +23,7 @@
                         {% if field.name != 'image' %}
                             {{ field | as_crispy_field }}
                         {% else %}
+                            <img src="{{field.image.url}}" style="display:none;height:100px;width:100px;padding:10px;" id="uploadedImage" />
                             {{ field }}
                         {% endif %}
                     {% endfor %}
