@@ -1,1 +1,1 @@
-web: gunicorn decarbonify_platform.wsgi:application
+web: gunicorn decabonify_platform.wsgi:application
