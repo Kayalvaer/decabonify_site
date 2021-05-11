@@ -1,0 +1,1 @@
+web: gunicorn decarbonify_platform.wsgi:application

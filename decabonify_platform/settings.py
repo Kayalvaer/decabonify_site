@@ -29,7 +29,11 @@ SECRET_KEY = '4yt&fszz&os1pw)5p!9yvwop0a_c*l2wcgr=c5cgfspb9-zf)l'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['51e40513ac65.ngrok.io','127.0.0.1']
+ALLOWED_HOSTS = ['51e40513ac65.ngrok.io',
+                '127.0.0.1',
+                'decarbonify-site.herokuapp.com',
+                'localhost'
+                ]
 
 
 # Application definition
@@ -122,12 +126,18 @@ WSGI_APPLICATION = 'decabonify_platform.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+
+if "DATABASE_URL" in os.environ:
+    DATABASES = {
+        "default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 
 
