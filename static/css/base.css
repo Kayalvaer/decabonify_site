@@ -128,10 +128,9 @@ a.solution-category-badge>span.badge:hover {
 }
 
 div.row.justify-content-center,
-div.container.carousel-text {
-    background-color: rgba(12, 62, 7, 0.379);
-    bottom: 4rem;
-    padding: 8rem 6rem 2rem 6rem;
+div.container.carousel-text,
+div.col-8.hero-info {
+    background-color: rgba(11, 52, 7, 0.434);
 }
 
 .carousel-caption p {
@@ -473,7 +472,8 @@ footer {
     .main-nav ul {
         background-color: #adb6a5c4;
     }
-    .hero-info {
-        padding-bottom: 6rem;
+    div.col-8.hero-info {
+        padding-bottom: 8rem;
+        font-size: small;
     }
 }
