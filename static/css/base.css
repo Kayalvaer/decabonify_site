@@ -127,7 +127,7 @@ a.solution-category-badge>span.badge:hover {
 div.row.justify-content-center,
 div.container.carousel-text,
 div.col-8.hero-info {
-    background-color: rgba(11, 52, 7, 0.434);
+    background-color: rgba(12, 62, 7, 0.379);
 }
 
 .carousel-caption p {
@@ -423,12 +423,22 @@ footer {
         padding-right: 3rem;
         font-size: 25px;
     }
-}
-
-@media (max-width: 812px) {
     .detail-card {
         justify-content: center;
         flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) {
+    .carousel-caption {
+        animation: right_to_left 3s ease;
+        position: absolute;
+        top: 60%;
+        text-transform: uppercase;
+        transform: translateY(-55%);
+        width: 100%;
+        letter-spacing: 3px;
+        opacity: 2;
     }
 }
 
@@ -439,11 +449,6 @@ footer {
 }
 
 @media (max-width: 320px) {
-    /*  div.row {
-        margin-right: 5rem;
-        padding-left: 2rem;
-        top: 2rem;
-    } */
     h1 strong {
         font-size: 16px;
         letter-spacing: 2px;
