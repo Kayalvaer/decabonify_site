@@ -55,7 +55,7 @@
             </div>
         </li> {% endcomment %}
         <!---Blog-->
-        <li class="nav-item dropdown">
+        {% comment %} <li class="nav-item dropdown">
             <a  class="nav-link font-weight-bold"
                 href="#"
                 id="decabBlog"
@@ -72,7 +72,7 @@
                 <a href="" class="dropdown-item">Media</a>
                 <a href="" class="dropdown-item">Events</a>
             </div>
-        </li>
+        </li> {% endcomment %}
 
         <!---test---->
     </ul>
@@ -87,7 +87,7 @@
       <li class="list-inline-item pb-4 mx-5 mt-3">
           <form method="GET" action="{% url 'products' %}">
               <div class="input-group w-60">
-                <input class="form-control border border-0 shadow bg-secondary text-white rounded-0" type="text" name="q"
+                <input class="form-control border border-0 shadow text-white rounded-0" type="text" name="q"
                   placeholder="search solutions">
                   <div class="input-group-append">
                       <button class="text-center form-control btn rounded-0" type="submit">

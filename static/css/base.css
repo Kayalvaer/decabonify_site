@@ -90,7 +90,7 @@ a.solution-category-badge>span.badge:hover {
 /* Carousel styling */
 
 .carousel-itemthree {
-    background: linear-gradient( 45deg, rgba(29, 236, 197, 0.7), rgba(91, 14, 214, 0.7) 100%);
+    background: linear-gradient( 45deg, rgba(29, 236, 197, 0.7), rgba(67, 45, 33, 0.7) 100%);
 }
 
 .main-carousel {
@@ -121,7 +121,7 @@ div.row.justify-content-center,
 div.container.carousel-text {
     background-color: rgba(12, 62, 7, 0.379);
     bottom: 4rem;
-    padding: 2rem 6rem 2rem 6rem;
+    padding: 8rem 6rem 2rem 6rem;
 }
 
 .carousel-caption p {
@@ -299,7 +299,7 @@ a.navlink {
 /* footer */
 
 footer {
-    background-color: #36621b !important;
+    background-color: #28a745 !important;
     margin-top: 10rem;
 }
 
