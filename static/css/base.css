@@ -25,6 +25,16 @@ body {
 }
 
 
+/* Gradient color1 - color2 - color1 */
+
+hr.container.w-50.mb-3 {
+    border: 0;
+    height: 1px;
+    background: #28a745;
+    background-image: linear-gradient(to right, #ceebc5, #84ed53, #ceebc5);
+}
+
+
 /* .product-container */
 
 .detail-name {
@@ -225,6 +235,14 @@ a.navlink {
 
 .product-form-wrap {
     margin-top: 10rem;
+}
+
+
+/*product edit/add/delete*/
+
+.toast-body,
+.bottom-toast {
+    background-color: #d9e4db !important;
 }
 
 

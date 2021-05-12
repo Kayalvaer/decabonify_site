@@ -1,21 +1,21 @@
-<div class="toast alert-toast bg-info text-white" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
-  <div class="toast-header">
-    <strong class="mr-auto">Alert!</strong>
+<div class="toast alert-toast text-info text-white" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
+  <div class="toast-header bg-info text-dark">
+    <strong class="mr-auto ">Alert!</strong>
   </div>
-  <div class="toast-body bg-info">
+  <div class="toast-body text-info">
       <div class="row">
           <div class="col"><p>{{ message }}</p></div>
       </div>
 
       {% if bag_items %}
       <div class="row">
-          <div class="col text-center bg-info">
+          <div class="col text-center text-info">
               <a class="btn btn-white" href="{% url 'whishlist' %}" role="button">View bucket list</a>
           </div>
       </div>
       {% endif %}
 
-      <button class="text-center bottom-toast w-100 bg-info" data-dismiss="toast" aria-label="Close">
+      <button class="text-center bottom-toast w-100 text-info" data-dismiss="toast" aria-label="Close">
             <i class="far fa-times-circle close-icon"></i>
       </button>
       

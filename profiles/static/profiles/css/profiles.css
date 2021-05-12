@@ -6,10 +6,11 @@
     color: #f5f5f5;
 }
 
-.order_history {
+
+/* .order_history {
     overflow-y: 416px;
     max-height: 416px;
-}
+} */
 
 .card-header {
     color: #000000 !important;

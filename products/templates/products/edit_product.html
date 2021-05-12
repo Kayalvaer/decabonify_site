@@ -23,7 +23,7 @@
                         {% if field.name != 'image' %}
                             {{ field | as_crispy_field }}
                         {% else %}
-                            <img src="/media/{{field.value}}" style="display:block;height:100px;width:100px;padding:10px;" id="uploadedImage" />
+                            <img src="/MEDIA_URL/{{field.value}}" style="display:block;height:100px;width:100px;padding:10px;" id="uploadedImage" />
                             {{ field }}
                         {% endif %}
                     {% endfor %}

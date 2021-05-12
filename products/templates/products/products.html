@@ -35,7 +35,7 @@
                                     <span class="p-2 mt-2 badge badge-white text-dark rounded-0 border border-dark">{{ c.sku }}</span>
                                 </a>
                             {% endfor %}
-                            <hr class="w-50 mb-1">
+                            <hr class="container w-50 mb-3">
                         </div>
                     </div>
                 </div>
@@ -72,7 +72,6 @@
                                     <div class="text-center no-match">
                                         <h2>No matching items</h2>
                                     </div>
-                                {% comment %} {% endfor %} {% endcomment %}
                                 {% else %}
                                 {% for product in products %}
                                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
