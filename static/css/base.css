@@ -119,11 +119,8 @@ a.solution-category-badge>span.badge:hover {
 .carousel-caption {
     animation: right_to_left 3s ease;
     position: absolute;
-    top: 60%;
     text-transform: uppercase;
-    transform: translateY(-55%);
     width: 100%;
-    letter-spacing: 3px;
     opacity: 2;
 }
 
@@ -304,11 +301,10 @@ a.navlink {
     background-position: center;
     height: calc(100vh - 300px);
     position: relative;
-    margin: 1.5rem;
 }
 
 .market-search {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     border-color: #36621b;
 }
 
@@ -443,13 +439,13 @@ footer {
 }
 
 @media (max-width: 320px) {
-    div.row {
+    /*  div.row {
         margin-right: 5rem;
         padding-left: 2rem;
         top: 2rem;
-    }
+    } */
     h1 strong {
-        font-size: 18px;
+        font-size: 16px;
         letter-spacing: 2px;
     }
     a.btn.btn-outline-success,
@@ -473,7 +469,10 @@ footer {
         background-color: #adb6a5c4;
     }
     div.col-8.hero-info {
-        padding-bottom: 8rem;
-        font-size: small;
+        font-size: 2rem;
+    }
+    .hero-info h1,
+    p {
+        font-size: 2rem;
     }
 }
