@@ -285,7 +285,7 @@ a.navlink {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    height: calc(100vh - 500px);
+    height: calc(100vh - 300px);
     position: relative;
     margin: 1.5rem;
 }
