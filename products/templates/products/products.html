@@ -152,8 +152,8 @@
 
 {% block postloadjs %}
     {{ block.super }}
+    <!-----Scroll to top when arrow up clicked BEGIN--->
     <script type="text/javascript">
-    /*Scroll to top when arrow up clicked BEGIN*/
         $(window).scroll(function() {
             var height = $(window).scrollTop();
             if (height > 100) {
@@ -170,8 +170,9 @@
             });
 
         });
-    /*Scroll to top when arrow up clicked END*/
 	</script>
+    <!----Scroll to top when arrow up clicked END---->
+
     
     <script type="text/javascript">
         $('#sort-finder').change(function() {
