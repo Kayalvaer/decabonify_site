@@ -118,16 +118,12 @@ a.solution-category-badge>span.badge:hover {
 
 .carousel-caption {
     animation: right_to_left 3s ease;
-    position: absolute;
+    background-color: rgba(11, 52, 7, 0.434);
+    margin-bottom: 10rem;
+    padding: 6rem 0 6rem 0;
     text-transform: uppercase;
     width: 100%;
     opacity: 2;
-}
-
-div.row.justify-content-center,
-div.container.carousel-text,
-div.col-8.hero-info {
-    background-color: rgba(11, 52, 7, 0.434);
 }
 
 .carousel-caption p {
@@ -208,11 +204,6 @@ h1 {
 
 a.navlink {
     color: #36621b !important;
-}
-
-* {
-    margin: 0;
-    padding: 0;
 }
 
 
@@ -298,7 +289,6 @@ a.navlink {
     background: url('/media/marketplace.png');
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
     height: calc(100vh - 300px);
     position: relative;
 }
@@ -313,7 +303,6 @@ a.navlink {
 
 footer {
     background-color: #28a745 !important;
-    margin-top: 10rem;
 }
 
 
@@ -421,7 +410,7 @@ footer {
     }
     h1 strong {
         padding-right: 3rem;
-        font-size: 25px;
+        font-size: 20px;
     }
 }
 
@@ -463,10 +452,6 @@ footer {
         background-color: #adb6a5c4;
     }
     div.col-8.hero-info {
-        font-size: 1rem;
-    }
-    .hero-info h1,
-    .hero p {
         font-size: 1rem;
     }
 }

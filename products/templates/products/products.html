@@ -144,7 +144,7 @@
         </div>
     </section>
     <div class="scroll-btn shadow-sm rounded-0 border border-black">
-        <a class="scroll-link d-flex h-100" >
+        <a class="d-flex h-100" id="scroll-link" >
             <i class="fas fa-arrow-up text-dark mx-auto my-auto"></i>
         </a>	
     </div>
@@ -153,9 +153,24 @@
 {% block postloadjs %}
     {{ block.super }}
     <script type="text/javascript">
-		$('.scroll-link').click(function(e) {
-			window.scrollTo(0,0)
-		})
+    /*Scroll to top when arrow up clicked BEGIN*/
+        $(window).scroll(function() {
+            var height = $(window).scrollTop();
+            if (height > 100) {
+                $('#scroll-link').fadeIn();
+            } else {
+                $('#scroll-link').fadeOut();
+            }
+        });
+        $(document).ready(function() {
+            $("#scroll-link").click(function(event) {
+                event.preventDefault();
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+                return false;
+            });
+
+        });
+    /*Scroll to top when arrow up clicked END*/
 	</script>
     
     <script type="text/javascript">
