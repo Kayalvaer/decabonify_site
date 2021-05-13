@@ -42,24 +42,24 @@
 
                             {% for item in wishlist_items %}
                                 <tr>
-                                    <td class="p-3 w-25">
+                                    <td class="p-2 w-25">
                                         {% if item.product.image %}
                                         <img class="img-fluid rounded image-responsive" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                                         {% else %}
                                         <img class="img-fluid rounded image-responsive" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
                                         {% endif %}
                                     </td>
-                                    <td class="py-3">
+                                    <td class="py-2">
                                         <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                                         <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                                     </td>
-                                    <td class="ml-5 py-3">
+                                    <td class="ml-5 py-2">
                                         <p class="my-0">${{ item.product.price }}</p>
                                     </td>
-                                    <td class="py-3 w-25">
+                                    <td class="py-2 w-25">
                                         <p class="my-0">{{ item.quantity }}</p>
                                     </td>
-                                    <td class="py-3 w-25 text-small">
+                                    <td class="py-2 w-25 text-small">
                                         <form class="form form-qty-edit" method="POST" action="{% url 'edit_wishlist' item.item_id %}">
                                             {% csrf_token %}
                                             <div class="form-group">
@@ -90,20 +90,20 @@
                                         <a class="edit-link text-success"><small>Reload</small></a>
                                         <a class="remove-item text-warning float-right" id="remove_{{ item.item_id }}" data-size="{{ item.product_size }}" href="{% url 'remove_in_wishlist' item.item_id %}"><small>Delete</small></a> 
                                     </td>
-                                    <td class="py-3">
+                                    <td class="py-2">
                                         <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
                                     </td>
                                 </tr>
                             {% endfor %}
                             <tr>
                                 <td colspan="5" class="pt-5 text-right">
-                                    <h6><strong>Bucket Total: ${{ total|floatformat:2 }}</strong></h6>
-                                    <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                                    <h5 class=text-muted><strong>Bucket Total: ${{ total|floatformat:2 }}</strong></h5>
+                                    <h5 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h5>
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="5" class="text-right">
-                                    <a href="{% url 'products' %}" class="btn btn-outline-success rounded-0 btn-lg">
+                                    <a href="{% url 'products' %}" class="btn btn-outline-success rounded-0 btn-lg mb-2">
                                         <span class="fa-icon">
                                             <i class="fas fa-chevron-left"></i>
                                         </span>
