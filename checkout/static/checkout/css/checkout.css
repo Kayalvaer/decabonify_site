@@ -16,16 +16,6 @@ input[name='q']::placeholder {
     color: #aab7c4 !important;
 }
 
-@media (max-width: 568px) {
-    .table-responsive {
-        font-size: 10px !important;
-    }
-    .btn-checkout {
-        margin-bottom: 1rem;
-        padding: 1.5rem;
-    }
-}
-
 
 /* ------------------------------------------------Loading spinner */
 

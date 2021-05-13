@@ -59,7 +59,7 @@
                                     <td class="py-3 w-25">
                                         <p class="my-0">{{ item.quantity }}</p>
                                     </td>
-                                    <td class="py-3 w-25">
+                                    <td class="py-3 w-25 text-small">
                                         <form class="form form-qty-edit" method="POST" action="{% url 'edit_wishlist' item.item_id %}">
                                             {% csrf_token %}
                                             <div class="form-group">
@@ -68,7 +68,7 @@
                                                         <button class="minus-qty btn btn-sm btn-success rounded-0" 
                                                             data-item_id="{{ item.item_id }}" id="minus-qty_{{ item.item_id }}">
                                                             <span>
-                                                                <i class="fas sync-alt fa-sm"></i>
+                                                                <i class="fas fa-sync-alt fa-sm"></i>
                                                             </span>
                                                         </button>
                                                     </div>
@@ -80,7 +80,7 @@
                                                         <button class="plus-qty btn btn-sm btn-success rounded-0"
                                                             data-item_id="{{ item.item_id }}" id="plus-qty_{{ item.item_id }}">
                                                             <span>
-                                                                <i class="fas trash-alt fa-sm"></i>
+                                                                <i class="fas fa-trash-alt fa-sm"></i>
                                                             </span>
                                                         </button>
                                                     </div>
