@@ -42,9 +42,9 @@ View the live project here. [Decarbonify](https://decarbonify-site.herokuapp.com
 Kindly test the adding and deletion of solutions by adding own solution and DO NOT DELETE THE ITEMS ALREADY ON THE DATABASE.
 To test the functionality, you can use below details for admin testing:
 
-* Username: kay
+* Username: kay or decarbonify
 
-* Password: Leyone2011
+* Password: Leyone2011 or decarbonify2021
 
 * Email: any
 
@@ -140,7 +140,7 @@ The colors of the site had to match [Decarbonify site](https://decarbonify.com/)
 
 - # Colour scheme
   The colours that are used for the start and game over screen are:
-- ![#fffff](https://via.placeholder.com/15/fffff/000000?text=+) #ffffff (White)
+- ![#ffffff](https://via.placeholder.com/15/fffff/000000?text=+) #ffffff (White)
 - ![#28a745](https://via.placeholder.com/15/28a745/000000?text=+) #28a745 (Green)
 - ![#36621b](https://via.placeholder.com/15/36621b/000000?text=+) #36621b] (Dark green)
 - ![#ff4500](https://via.placeholder.com/15/ff4500/000000?text=+) #ff4500 (dark orange)
@@ -201,32 +201,32 @@ The structure of the website is:
 # <a name="features"></a> Features
 ### <a name="existing-features"></a> Existing Features
 
-Feature | Details
+Feature| Details
 --------|--------
-* Responsiveness | throughout all devices.
+* Responsiveness| throughout all devices.
 
-* Menu Bar | always placed at the top of the screen on all devices. Easy for the user to navigate.
+* Menu Bar| always placed at the top of the screen on all devices. Easy for the user to navigate.
 
-* Company Logo | inside the navbar, always visible, this is also a link to the index page.
+* Company Logo| inside the navbar, always visible, this is also a link to the index page.
 
-* Toasts | to display important alerts and messages to the user (e.g. Order successfully completed, item added to bag,    signed in successfully, etc).
+* Toasts| to display important alerts and messages to the user (e.g. Order successfully completed, item added to bag,    signed in successfully, etc).
 
-* Shopping bag icon | to always be visible on the menu list, with the quantity number of the products inside. Redirected users to
+* Shopping bag icon| to always be visible on the menu list, with the quantity number of the products inside. Redirected users to
  the shopping basket page on a click.
 
-* Profile icon | always visible at the menu top. Clicking on it, a dropdown appears with sub-links to other pages: "register" and "sign in" for all users,
+* Profile icon| always visible at the menu top. Clicking on it, a dropdown appears with sub-links to other pages: "register" and "sign in" for all users,
  "my profile" for registered users and "Manage products" for admin superusers.
 
-* Footer | always at the bottom of the page, with a summary of the most important links inside the web page, links to social media accounts,
+* Footer| always at the bottom of the page, with a summary of the most important links inside the web page, links to social media accounts,
  company information with relative information.
 
-* Hand pointer cursor and a color change on hover | To clearly identify links.
+* Hand pointer cursor and a color change on hover| To clearly identify links.
 
-* Add to basket or wishlist buttons | from the product detail page that allows to add the item to the shopping basket.
+* Add to basket or wishlist buttons| from the product detail page that allows to add the item to the shopping basket.
 
-* Quantity (add and reload with removal) functionality | available both on product detail page and shopping basket page.
+* Quantity (add and reload with removal) functionality| available both on product detail page and shopping basket page.
 
-* Secure checkout button | to redirects to Stripe for safe purchase payments.
+* Secure checkout button| to redirects to Stripe for safe purchase payments.
 
 
 ## <a name="left-to"></a> Features left to implement
@@ -410,6 +410,174 @@ class OrderLineItem(models.Model):
 
 <summary>Functionality Testing </summary>
 
+### Perfomance testing:
+
+![Decarbonify](static/readme-doc/rendor-blocks-error.png)
+
+### **Performance testing:**
+1. Tested website responsiveness using http://www.responsinator.com/
+    1. Results: The website did not load on responsinator. However I used Google dev tool responsive checker to test and all was great except the 320x568 small screen sizes. I made styling adjustments so that it fits. Most of the popular scree sizes passed well. Also asked family and friends to test.
+1. Tested the image size to ensure no image is to large and impacting the website loading times. I used the Tiny.png 
+    1. Results: Images were ok and resized.
+
+1. All HTML and CSS were tested using https://jigsaw.w3.org/css-validator/validator
+    1. 25 errors in html validator observed.All but the templates resulted in errors from comment code and duplication of the logo-img id. This was to be expected as the logo was duplicated in the same page to allow visibility in mobile screens.
+    1. It is coomon that all HTML pages show errors where the Jinja template language was used
+    1. None of these are actual errors within the code
+	1. 5 critical CSS errors were observed. However, the items highlighted were added intentionally to the CSS files and did create the desired affect
+1. Tested the website on the popular mobile screens include apple phone and desktop and tablet.
+    1. Results: The website was responsive and the elements performed in the way they were intended to
+
+1. Tested adding items to the basket
+    1. Results: Successfully able to add an item to the basket
+1. Tested increasing the quantity of items in the basket
+    1. Results: Successfully able to increase the quantity of an item in the basket
+1. Tested removing items from the basket
+    1. Results:Successfully removed an item from the basket
+1. Tested the stripe process using 4242 4242 4242 4242 which should be successful
+    1. Results: Order completed successfully and the confirmation page appears
+1. Tested the stripe process using 4000 0027 6000 3184 which will request authorisation - completed authentication
+    1. Results: Authorisation screen appears then the order completed successfully and the confirmation page appears
+1. Tested the stripe process using 4000 0027 6000 3184 which will request authorisation - selected declined
+    1. Results: The payment fails and the user is returned to the checkout page. The appropriate error message appears
+1. Tested the profile page and that the orders placed above show correctly
+	1. Results: The two successful orders made during testing appeared on the right hand side of the screen and looked good on all screens
+
+
+<details>
+<summary>Usability Testing </summary>
+
+### Usability Testing
+
+Going through the user stories, I tried to test the project with different scenarios on different devices
+ (laptop and mobile phone).
+
+#### As a customer
+
+* I want to browse through the categories to understand if there is something I might buy:
+
+    Opening the site, first scroll down to have a look at the home page, then go back to the top.
+    Read the names of the categories in the navigation bar and  click on one of them.
+
+    A page with all the items in that category opens, and you are able to sort the products in different ways (
+        price, brand, name
+    ).
+
+* I want to add something to my shopping bag:
+
+    Finding an item that you like, Click on it and reach the product detail page. Here one can view all
+     the details, such as image, description and amount.
+    There is a button that allows adding the item to the shopping bag and choosing the right size and the 
+    amount needed. When adding something a toast appears on the top-right of the page, telling me that the item has been
+    successfully added.
+
+    On the top of the page there is a banner with a message, saying how many items one have inside my basket
+     and how much is the grand total right now that one should pay if deciding to complete the purchase.
+
+    There is also a count number next to the shopping bag icon inside the navbar.
+
+    At the bottom of the page I can see a carousel with some items that I might like. If I see something interesting,
+     I can click on the name of the product and I am redirected to that specific product page. From there, one can 
+     repeat the process (add item to the bag, click on another item and visit its page).
+
+# Add basket
+
+* I want to purchase something:
+     The chance to access user shopping basket in three ways: from the bag icon in the navbar, from the banner at
+      the top of the page clicking on the word "bag" (which stands out from the other words, so one understand it is a link),
+      or by clicking the button "View-wishlist" that appears inside the toast when adding a new product.
+    
+    From my shopping bag, review all the items added and you can also modify it. Change the quantity per item
+     or remove the product. If deciding to update the quantity you get a toast with a message that confirms the updating, 
+     but see as the price in the product row changes (it updates automatically), together with the grand total.
+    If you remove something, get as well a toast with a confirmation and the product disapper from the basket. The price updates.
+
+    When satisfied with the content in the shopping bag, I can click on the button "Secure Checkout", that brings me 
+    to another page.
+    Here I find a form where one can enter my details.
+    If a registered user and already logged in, find my info already displayed inside the form. If no changes required leave them as they are and go on with the payment, or you can change them.
+    A checkout box allows saving the information for the next time.
+    If not a registered user, complete anyway the purchase. The form in this case is empty and you can fill it 
+    with your details.
+
+    Enter credit card information and the ZIP code if required. If the form is valid, the card is charged and purchase
+     is completed. You then get redirected to a page with the summary of the order and a toast confirms the successfully operation.
+ 
+
+# basket
+
+# Order confirmation
+
+* I want to register:
+    
+    Click on the profile icon and see the link to the "Register" page.
+    You then redirected to a page with a form where you need to enter email twice, a username and a password twice.
+    If something is wrong in my form (a wrong format) I am not allowed to submit and a message will be send to alert you.
+    If the form is correct, it is submitted. 
+    You then redirected to a page that asks you to validate your email through a link that has been automatically sent to the email address provided. Open emails and find the email from
+      "Decarbonify". Click on the link and account is now verified. The "Sign In" page automatically opens and you can
+       log in with my new account.
+    
+# Log In
+
+# Verify email
+
+# email-verification
+
+* I want to add a review:
+
+    As a registered user I can perform tasks that are not available to non registered ones. One of them is the chance to
+     add a review.
+    From nav menu just click on the account icon. 
+    A dropdown menu with sub-links opens and select "My profile".
+    From this page, click on the section "My reviews" which is inside "My activity".
+
+* I want to log out:
+
+    Click on the user icon and select the option "logout". To confirm if you really want to sign out, and 
+    clicking on the "sign out" button you redirected to the home page, with a toast that confirms that now you signed out.
+
+#### As an admin
+
+* I want to add a product directly from the website:
+
+    I log in with my credentials. Being an admin I can access functionality that is not accessible to other users.
+
+    Click on the user icon, select "Manage Product" and you get redirected to a page where one can add a new product 
+    to the database. Click on "Add Product" and if the form is valid the product is successfully added. If not,
+     a message inside the forms tells you their is an error.
+
+
+# add new item
+
+* I want to update details about a product from the website:
+
+    log in with my credentials. An admin can access functionality that is not accessible to other users.
+
+    On every page where an item is displayed, see two options: "edit" or "delete".
+
+    If you want to update some info, click on detail and you can now access a form. Inside each field the 
+    product details are already in the database. Click on the field that you want to update, change the value, and then 
+    click on the button "Update Product". If everything is correct, the form is validated and submitted.
+
+    See a toast with a confirmation message and you redirected to the collection page.
+
+# Edit Item
+
+* I want to delete a product from the website:
+
+    Log in with my credentials. Being an admin I can access functionality that is not accessible to other users.
+
+    On every page where an item is displayed, I see two options: "edit" or "delete".
+
+    Select "delete" and the item is automatically removed from the database. I am redirected to the collection
+     page and I get a toast confirmation.
+
+
+</details>
+
+
+
 ### Functionality Testing
 
 All the <strong>links</strong> are working.
@@ -583,6 +751,9 @@ AWS_SECRET_ACCESS_KEY | 'AWS_SECRET_ACCESS_KEY'
 * Some of the experienced and debugged errors: https://stackoverflow.com/questions/47065438/attributeerror-module-django-contrib-auth-views-has-no-attribute
 
 * Heroku issue : failed to fix it but tried this https://stackoverflow.com/questions/65146909/remote-rejected-master-master-pre-receive-hook-declined-error-failed-t
+
+* Ed Bradley - Used this readme as an example of how to deploy Heroku
+    * https://github.com/Edb83/self-isolution
 
 
 ### :star: Acknowledgements

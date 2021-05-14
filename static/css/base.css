@@ -1,17 +1,11 @@
 /* General styling */
 
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-family: "Montserrat", sans-serif;
-}
-
 html,
 body {
     height: 100%;
     margin: 0;
     padding: 0;
+    font-family: "Poppins", sans-serif;
 }
 
 html {
@@ -27,7 +21,7 @@ body {
 
 /* Gradient color1 - color2 - color1 */
 
-hr.container.w-50.mb-3 {
+hr .container .w-50 .mb-3 {
     border: 0;
     height: 1px;
     background: #28a745;
@@ -279,7 +273,7 @@ a.navlink {
 }
 
 .btn input {
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color: .15s ease-in-out, box-shadow: .15s ease-in-out;
+    transition: color .15s ease-in-out;
 }
 
 
