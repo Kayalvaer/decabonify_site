@@ -384,7 +384,7 @@ footer {
 
 @media (max-width: 568px) {
     .table-responsive,
-    tbody {
+    .tbody {
         font-size: 10px !important;
     }
     .btn-checkout {
