@@ -140,7 +140,7 @@ The colors of the site had to match [Decarbonify site](https://decarbonify.com/)
 
 - # Colour scheme
   The colours that are used for the start and game over screen are:
-- ![#ffffff](https://via.placeholder.com/15/fffff/000000?text=+) #ffffff (White)
+- ![#fffff](https://via.placeholder.com/15/fffff/000000?text=+) #ffffff (White)
 - ![#28a745](https://via.placeholder.com/15/28a745/000000?text=+) #28a745 (Green)
 - ![#36621b](https://via.placeholder.com/15/36621b/000000?text=+) #36621b] (Dark green)
 - ![#ff4500](https://via.placeholder.com/15/ff4500/000000?text=+) #ff4500 (dark orange)
