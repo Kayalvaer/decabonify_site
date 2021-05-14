@@ -150,7 +150,7 @@ The colors of the site had to match [Decarbonify site](https://decarbonify.com/)
 
 I choosed two fonts that are modern and highly legible: 
 
-* Montserrat
+* Poppins
 * Sans Serif
 
 
