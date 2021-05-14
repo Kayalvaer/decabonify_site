@@ -228,7 +228,7 @@ Feature | Details
 
 * Secure checkout button | to redirects to Stripe for safe purchase payments.
 
-<details>
+
 ## <a name="left-to"></a> Features left to implement
 Feature | Details
 --------|--------
@@ -251,10 +251,14 @@ Feature | Details
 
 For this project I have used SQLite on the local server and Postgres for deployment.
 
-<details>
+
 <summary>Models</summary>
 
 ### User Profile
+
+
+<details>
+
 ```
 class UserProfile(models.Model):
     """
@@ -271,7 +275,12 @@ class UserProfile(models.Model):
     default_county = models.CharField(max_length=80, null=True, blank=True)
 ```
 
+</details>
+
 ### Category
+
+
+<details>
 ```
 class Category(models.Model):
     class Meta:
@@ -293,7 +302,12 @@ class Product(models.Model):
     image = models.ImageField(upload_to='products', null=True, blank=True)
 ```
 
+</details>
+
 ### Order
+
+
+<details>
 ```
 class Order(models.Model):
     order_number = models.CharField(max_length=32, null=False, editable=False)
@@ -321,7 +335,12 @@ class Order(models.Model):
         max_length=254, null=False, blank=False, default='')
 ```
 
-### Oder Line
+</details>
+
+### Ordering Process
+
+
+<details>
 ```
 class OrderLineItem(models.Model):
     order = models.ForeignKey(
@@ -339,7 +358,7 @@ class OrderLineItem(models.Model):
 ---
 </details>
 
-<details>
+
 ## Technologies Used
 
 ### Languages Used
@@ -385,11 +404,9 @@ class OrderLineItem(models.Model):
 * http://www.responsinator.com/
 
 ---
-</details>
 
 ## Testing
 
-<details>
 
 <summary>Functionality Testing </summary>
 
@@ -409,15 +426,25 @@ For <strong>Python</strong> I used the command ```python3 -m flake8``` in my ter
 Most of the errors were too long lines and errors DJ01 ("Avoid using null=True on string-based fields").
 
 left the ones below because they are important for the functionality:
+
+
+<details>
+
 ```
 ./checkout/webhooks.py:28:5: F841 local variable 'e' is assigned to but never used
 ./checkout/webhooks.py:31:5: F841 local variable 'e' is assigned to but never used
 ./checkout/apps.py:8:9: F401 'checkout.signals' imported but unused
 ```
 
+
+</details>
+
 I successfully tested also payments using different credit cards provided by [Stripe](https://stripe.com/docs/testing#international-cards).
 
 I checked that the payment form adapts to the credit card number:
+
+
+<details>
 
 If I enter a card that is in the U.S.A., I get the field for the ZIP code.
     
@@ -451,11 +478,13 @@ I tested for expired card:
 
     Card number: 4000 0000 0000 0069
 
+
+</details>
+
 Tested webhook and got success message below: 
 
 ![Webhook testing](static/readme-doc/webhook-test.png)
 
-</details>
 
 
 # <a name="testing"></a> Testing
@@ -531,7 +560,7 @@ AWS_SECRET_ACCESS_KEY | 'AWS_SECRET_ACCESS_KEY'
 
 ## Credits
 
-### :star: Code
+### :computer: Code
 
 * [Boutique Ado from Code Institute](https://github.com/ckz8780/boutique_ado_v1) provided the base code reference for the project.
 
