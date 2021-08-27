@@ -97,19 +97,19 @@
                             {% endfor %}
                             <tr>
                                 <td colspan="5" class="pt-5 text-right">
-                                    <h5 class=text-muted><strong>Bucket Total: ${{ total|floatformat:2 }}</strong></h5>
-                                    <h5 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h5>
+                                    <h5 class="text-muted text-medium" ><strong>Bucket Total: ${{ total|floatformat:2 }}</strong></h5>
+                                    <h5 class="mt-4 text-medium"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h5>
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="5" class="text-right">
-                                    <a href="{% url 'products' %}" class="btn btn-outline-success rounded-0 btn-lg mb-2">
+                                    <a href="{% url 'products' %}" class="btn btn-outline-success rounded-0">
                                         <span class="fa-icon">
                                             <i class="fas fa-chevron-left"></i>
                                         </span>
-                                        <span class="text-uppercase">Continue Shopping</span>
+                                        <span class="text-uppercase">Shop More</span>
                                     </a>
-                                    <a href="{% url 'checkout' %}" class="btn btn-success btn-lg rounded-0">
+                                    <a href="{% url 'checkout' %}" class="btn btn-success rounded-0">
                                         <span class="fa-icon">
                                             Secure Pay
                                             <i class="fas fa-user-lock"></i>

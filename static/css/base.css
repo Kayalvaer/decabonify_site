@@ -38,6 +38,7 @@ hr .container .w-50 .mb-3 {
 
 .detail-info {
     top: 50px;
+    margin-bottom: 6rem;
 }
 
 
@@ -69,7 +70,7 @@ a.solution-category-badge>span.badge:hover {
 }
 
 .wishlist-info {
-    margin-top: 14rem;
+    margin-top: 6rem;
 }
 
 
@@ -381,10 +382,6 @@ footer {
     .tbody {
         font-size: 10px !important;
     }
-    .btn-checkout {
-        margin-bottom: 1rem;
-        padding: 1.5rem;
-    }
 }
 
 @media (min-width: 1024px) {
@@ -454,7 +451,8 @@ footer {
 
 @media (min-width: 320px) and (max-width: 1023px) {
     .main-nav ul {
-        background-color: #393c36e7;
+        background-color: #244306 !important;
+        color: #f1eeee !important;
     }
     div.col-8.hero-info {
         font-size: 1rem;

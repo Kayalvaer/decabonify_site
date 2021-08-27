@@ -111,14 +111,14 @@
                             </fieldset>
 
                             <div class="submit-btn text-right mt-5 mb-2">
-                                        <a href="{% url 'view_wishlist' %}" class="btn btn-outline-success rounded-0 btn-checkout">
+                                        <a href="{% url 'view_wishlist' %}" class="btn btn-outline-success rounded-0">
                                             <span class="fa-icon">
                                                 <i class="fas fa-chevron-left"></i>
                                             </span>
-                                            <span class="font-weight-bold">Adjust Bag</span>
+                                            <span class="font-weight-bold ">Adjust Bag</span>
                                         </a>
                                         <button id="submit-btn" class="btn btn-success rounded-0">
-                                            <span class="font-weight-bold">Complete Your Order</span>
+                                            <span class="font-weight-bold">Complete Order</span>
                                             <span class="fa-icon">
                                                 <i class="fas fa-lock"></i>
                                             </span>
@@ -127,7 +127,7 @@
                                             <span class="fa-icon warning-icon">
                                                 <i class="fas fa-exclamation-circle"></i>
                                             </span>
-                                            <span class="text-success">Card to be charged
+                                            <span class="text-success mt-2">Card to be charged
                                                 <strong>${{ grand_total|floatformat:2 }}</strong>
                                             </span>
                                         </p>
