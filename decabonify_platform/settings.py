@@ -17,6 +17,7 @@ if os.path.exists("env.py"):
 from pathlib import Path
 import django_heroku
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 #BASE_DIR = Path(__file__).resolve().parent.parent
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -55,6 +56,9 @@ INSTALLED_APPS = [
     'wishlist',
     'checkout',
     'profiles',
+    'store',
+    'category',
+    'accounts',
 
     # Other
     'crispy_forms',
@@ -121,6 +125,8 @@ LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'decabonify_platform.wsgi.application'
+
+AUTH_USER_MODEL = 'accounts.Account'
 
 
 # Database
