@@ -44,7 +44,7 @@ To test the functionality, you can use below details for admin testing:
 
 * Username: admin2@admin.com
 
-* Password: Lletmein123
+* Password: letmein123
 
 * Email: any
 
