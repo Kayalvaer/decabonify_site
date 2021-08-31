@@ -42,9 +42,9 @@ View the live project here. [Decarbonify](https://decarbonify-site.herokuapp.com
 Kindly test the adding and deletion of solutions by adding own solution and DO NOT DELETE THE ITEMS ALREADY ON THE DATABASE.
 To test the functionality, you can use below details for admin testing:
 
-* Username: kay or decarbonify
+* Username: admin2@admin.com
 
-* Password: Leyone2011 or decarbonify2021
+* Password: Lletmein123
 
 * Email: any
 
