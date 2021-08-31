@@ -1,6 +1,7 @@
 from django.db import models
 # from products.models import Products
 from django.urls import reverse
+from category.models import Category
 from django.db.models import Avg, Count
 
 # Create your models here.
@@ -14,6 +15,7 @@ class Product(models.Model):
     stock           = models.IntegerField()
     is_available    = models.BooleanField(default=True)
     created_date    = models.DateTimeField(auto_now_add=True)
+    category        = models.ForeignKey(Category, on_delete=models.CASCADE)
     modified_date   = models.DateTimeField(auto_now=True)
 
     def get_url(self):
