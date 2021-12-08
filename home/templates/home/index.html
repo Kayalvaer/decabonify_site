@@ -1,52 +1,42 @@
-{% extends "base.html" %}
-{% load static %}
-
-{% block page_header %}
-    <div class="container header-wrapper">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+{% extends "base.html" %} {% load static %} {% block page_header %}
+<div class="container header-wrapper">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 
-    {% block carousel %}
-    {% include 'includes/carousel-items.html' %}
-    {% endblock %}
-{% endblock %}
+{% block carousel %} {% include 'includes/carousel-items.html' %} {% endblock %} {% endblock %} {% block content %}
+<div class="container">
+    <!-- marketplace section content start -->
 
-{% block content %}
-    <div class="container">
-        <!-- marketplace section content start -->
-
-            <div class="market-search rounded-pill mt-5">
-                <form class="form" method="GET" action="{% url 'products' %}">
-                    <div class="input-group w-70">
-                        <input class="search-input form-control border border-success rounded-pill p-4" type="text" name="q" placeholder="find solutions">
-                            <div class="input-group-append">
-                                <button class="form-control form-control btn btn-black border border-0" type="submit">
+    <div class="market-search rounded-pill mt-5">
+        <form class="form" method="GET" action="{% url 'products' %}">
+            <div class="input-group w-70">
+                <input class="search-input form-control border border-success rounded-pill p-4" type="text" name="q" placeholder="find solutions">
+                <div class="input-group-append">
+                    <button class="form-control form-control btn btn-black border border-0" type="submit">
                                     <span class="icon">
                                         <i class="fas fa-search fa-lg w-50" type="submit"></i>
                                     </span>
                                 </button>
-                            </div>
-                    </div>           
-                </form>
-            </div> 
-
-            <div class="pl-3">
-                <h4 class="mt-5"><strong>Welcome to the Market place</strong></h4>
-                <p class="text-muted ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis consequatur
-                eligendi quisquam doloremque vero ex debitis veritatis placeat unde animi laborum
-                sapiente illo possimus, commodi dignissimos obcaecati illum maiores corporis.
-                </p>
-            </div>
-
-            <div class="market-img img-fluid img-responsive ml-2 mt-0 mb-0">
-                <div class="col-md-6 ">                
                 </div>
             </div>
-         
+        </form>
     </div>
-    <!--third section content end-->
-    
- {% endblock %}
+
+    <div class="pl-3">
+        <h4 class="mt-5"><strong>Welcome to Spotify for ESG Technology</strong></h4>
+        <p class="text-muted ">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis consequatur eligendi quisquam doloremque vero ex debitis veritatis placeat unde animi laborum sapiente illo possimus, commodi dignissimos obcaecati illum maiores corporis.
+        </p>
+    </div>
+
+    <div class="market-img img-fluid img-responsive ml-2 mt-0 mb-0">
+        <div class="col-md-6 ">
+        </div>
+    </div>
+
+</div>
+<!--third section content end-->
+
+{% endblock %}
